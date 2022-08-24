@@ -1,6 +1,28 @@
 const convert_it = document.getElementById("con")
 const val = document.getElementById("val")
 const ans = document.getElementById("answer")
+const touch = document.getElementById("touch")
+const nav = document.getElementById("navbar")
+
+ziggy = 0
+
+function myFunction(x) {
+    x.classList.toggle("change");
+  }
+
+if (touch) {
+    touch.addEventListener('click', () =>{
+        if (ziggy == 0) {
+            nav.style.marginRight = "-10px"
+            ziggy = 1
+        }
+        else if(ziggy == 1){
+            nav.style.marginRight = "-1000px"
+            ziggy = 0
+        }
+    })
+}
+
 
 if (val) {
     val.addEventListener("keypress", function(event) {

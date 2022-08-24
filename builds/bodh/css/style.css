@@ -147,12 +147,6 @@ body{
     }
 }
 
-@media (max-width:1669px) {
-    #box{
-        width: 70%;
-    }
-}
-
 @media (max-width:1400px) {
     #box{
         width: 80%;
