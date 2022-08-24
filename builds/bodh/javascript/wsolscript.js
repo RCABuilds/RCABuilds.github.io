@@ -93,6 +93,15 @@ function connect(){
     }
 
     else if (STRING_OPTION_A == "Decimal" && STRING_OPTION_B == "Binary") {
+        num = val.toString().toUpperCase();
+        const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            num = num.replaceAll(element, "");
+
+            fixInput = document.getElementById('val').value = num;
+        }
+
         uni_val = 0
         //Starter
         const newh1 = document.createElement("h2")
@@ -265,6 +274,17 @@ function connect(){
     
     //Decimal to octal
     else if (STRING_OPTION_A == "Decimal" && STRING_OPTION_B == "Octal") {
+        num = val.toString().toUpperCase();
+
+        //anti leters and other number
+        const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            num = num.replaceAll(element, "");
+
+            fixInput = document.getElementById('val').value = num;
+        }
+
         uni_val = 0
         //Starter
         const newh1 = document.createElement("h2")
@@ -429,6 +449,16 @@ function connect(){
     //Decimal to hex
     else if (STRING_OPTION_A == "Decimal" && STRING_OPTION_B == "Hex") {
         uni_val = 0
+        num = val.toString().toUpperCase();
+
+        //anti leters and other number
+        const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            num = num.replaceAll(element, "");
+
+            fixInput = document.getElementById('val').value = num;
+        }
         //Starter
         const newh1 = document.createElement("h2")
         const texty = document.createTextNode("Converting " + STRING_OPTION_A + " to " + STRING_OPTION_B + ";")
@@ -591,6 +621,15 @@ function connect(){
 
     //Octal to Binary
     else if (STRING_OPTION_A == "Octal" && STRING_OPTION_B == "Binary") {
+        num = val.toString().toUpperCase();
+        //anti leters and other number
+        const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            num = num.replaceAll(element, "");
+
+            fixInput = document.getElementById('val').value = num;
+        }
         uni_val = 0
         //Starter
         const newh1 = document.createElement("h2")
@@ -658,7 +697,8 @@ function connect(){
             vals = Math.floor(vals/10);
             i++;
             
-            anz = Math.pow(reverse * 8, i);
+            ror = Math.pow(8, i);
+            anz = reverse * ror
             if (reverse==0 || reverse==0.0) {
                 anz=0.0;
             }
@@ -702,7 +742,7 @@ function connect(){
         uni_val = uni_val+1
         anotherstep = document.createElement("h3")
 
-        decimal_value = parseInt(val,8)
+        decimal_value = parseInt(fixInput,8)
 
         texty3 = document.createTextNode("Then sum all value, and we get " + decimal_value.toString() + ";")
         anotherstep.appendChild(texty3)
@@ -716,7 +756,7 @@ function connect(){
         //Another Step
         uni_val = uni_val+1
         anotherstep = document.createElement("h3")
-        texty3 = document.createTextNode(STRING_OPTION_A + ": " +val)
+        texty3 = document.createTextNode(STRING_OPTION_A + ": " + fixInput)
         anotherstep.appendChild(texty3)
         ans.insertBefore(anotherstep, ans.children[uni_val])
 
@@ -880,6 +920,16 @@ function connect(){
     }
     //Octal to Decimal
     else if (STRING_OPTION_A == "Octal" && STRING_OPTION_B =="Decimal") {
+        num = val.toString().toUpperCase();
+        //anti leters and other number
+        const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            num = num.replaceAll(element, "");
+
+            fixInput = document.getElementById('val').value = num;
+        }
+
         uni_val = 0
         //Starter
         const newh1 = document.createElement("h2")
@@ -931,7 +981,8 @@ function connect(){
             vals = Math.floor(vals/10);
             i++;
             
-            anz = Math.pow(reverse * 8, i);
+            ror = Math.pow(8, i);
+            anz = ror * reverse
             if (reverse==0 || reverse==0.0) {
                 anz=0.0;
             }
@@ -974,7 +1025,7 @@ function connect(){
         uni_val = uni_val+1
         anotherstep = document.createElement("h3")
 
-        decimal_value = parseInt(val,8)
+        decimal_value = parseInt(fixInput,8)
 
         texty3 = document.createTextNode("Then sum all value, and we get " + decimal_value.toString() + ";")
         anotherstep.appendChild(texty3)
@@ -994,7 +1045,7 @@ function connect(){
         //Another Step
         uni_val = uni_val+1
         anotherstep = document.createElement("h3")
-        texty3 = document.createTextNode(STRING_OPTION_A + ": " +val)
+        texty3 = document.createTextNode(STRING_OPTION_A + ": " +fixInput)
         anotherstep.appendChild(texty3)
         ans.insertBefore(anotherstep, ans.children[uni_val])
 
@@ -1007,6 +1058,18 @@ function connect(){
     }
     //Octal to Hex
     else if (STRING_OPTION_A == "Octal" && STRING_OPTION_B == "Hex") {
+        num = val.toString().toUpperCase();
+        //anti leters and other number
+        
+        
+        const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            num = num.replaceAll(element, "");
+
+            fixInput = document.getElementById('val').value = num;
+        }
+
         uni_val = 0
         //Starter
         const newh1 = document.createElement("h2")
@@ -1074,7 +1137,8 @@ function connect(){
             vals = Math.floor(vals/10);
             i++;
             
-            anz = Math.pow(reverse * 8, i);
+            ror = Math.pow(8, i);
+            anz = ror * reverse
             if (reverse==0 || reverse==0.0) {
                 anz=0.0;
             }
@@ -1133,7 +1197,7 @@ function connect(){
         //Another Step
         uni_val = uni_val+1
         anotherstep = document.createElement("h3")
-        texty3 = document.createTextNode(STRING_OPTION_A + ": " +val)
+        texty3 = document.createTextNode(STRING_OPTION_A + ": " + fixInput)
         anotherstep.appendChild(texty3)
         ans.insertBefore(anotherstep, ans.children[uni_val])
 
@@ -1298,6 +1362,16 @@ function connect(){
     
     //Binary to Octal
     else if (STRING_OPTION_A == "Binary" && STRING_OPTION_B == "Octal") {
+        num = val.toString().toUpperCase();
+        //anti leters and other number
+        const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\', "2", "3", "4", "5", "6", "7", "8", "9"]
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            num = num.replaceAll(element, "");
+
+            fixInput = document.getElementById('val').value = num;
+        }
+
         uni_val = 0
         //Starter
         const newh1 = document.createElement("h2")
@@ -1403,7 +1477,7 @@ function connect(){
         uni_val = uni_val+1
         anotherstep = document.createElement("h3")
 
-        decimal_value = parseInt(val,2)
+        decimal_value = parseInt(input,2)
 
         texty3 = document.createTextNode("Then sum all value, and we get " + decimal_value.toString() + ";")
         anotherstep.appendChild(texty3)
@@ -1417,7 +1491,7 @@ function connect(){
         //Another Step
         uni_val = uni_val+1
         anotherstep = document.createElement("h3")
-        texty3 = document.createTextNode(STRING_OPTION_A + ": " +val)
+        texty3 = document.createTextNode(STRING_OPTION_A + ": " + fixInput)
         anotherstep.appendChild(texty3)
         ans.insertBefore(anotherstep, ans.children[uni_val])
 
@@ -1569,7 +1643,7 @@ function connect(){
 
         uni_val = uni_val + 1
         anotherstep = document.createElement("h3")
-        texty3 = document.createTextNode(STRING_OPTION_A + ": " + document.getElementById("val").value)
+        texty3 = document.createTextNode(STRING_OPTION_A + ": " + fixInput)
         anotherstep.appendChild(texty3)
         ans.insertBefore(anotherstep, ans.children[uni_val])
 
@@ -1581,6 +1655,15 @@ function connect(){
     }
     //Binary to Decimal
     else if (STRING_OPTION_A == "Binary" && STRING_OPTION_B =="Decimal") {
+        num = val.toString().toUpperCase();
+        //anti leters and other number
+        const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\', "2", "3", "4", "5", "6", "7", "8", "9"]
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            num = num.replaceAll(element, "");
+
+            fixInput = document.getElementById('val').value = num;
+        }
         uni_val = 0
         //Starter
         const newh1 = document.createElement("h2")
@@ -1690,7 +1773,7 @@ function connect(){
         //Another Step
         uni_val = uni_val+1
         anotherstep = document.createElement("h3")
-        texty3 = document.createTextNode(STRING_OPTION_A + ": " +val)
+        texty3 = document.createTextNode(STRING_OPTION_A + ": " + fixInput)
         anotherstep.appendChild(texty3)
         ans.insertBefore(anotherstep, ans.children[uni_val])
 
@@ -1703,6 +1786,16 @@ function connect(){
     }
     //Binary to Hex
     else if (STRING_OPTION_A == "Binary" && STRING_OPTION_B == "Hex") {
+        num = val.toString().toUpperCase();
+        //anti leters and other number
+        const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\', "2", "3", "4", "5", "6", "7", "8", "9"]
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            num = num.replaceAll(element, "");
+
+            fixInput = document.getElementById('val').value = num;
+        }
+
         uni_val = 0
         //Starter
         const newh1 = document.createElement("h2")
@@ -1822,7 +1915,7 @@ function connect(){
         //Another Step
         uni_val = uni_val+1
         anotherstep = document.createElement("h3")
-        texty3 = document.createTextNode(STRING_OPTION_A + ": " +val)
+        texty3 = document.createTextNode(STRING_OPTION_A + ": " + fixInput)
         anotherstep.appendChild(texty3)
         ans.insertBefore(anotherstep, ans.children[uni_val])
 
@@ -1987,6 +2080,17 @@ function connect(){
 
     //Hex to Binary
     else if (STRING_OPTION_A == "Hex" && STRING_OPTION_B == "Binary") {
+        //restriction characters
+        num = val.toString().toUpperCase();
+        const UNESSESSARY_EXTRA = ["G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+        
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            
+            num = num.replaceAll(element, "");
+            fixInput = document.getElementById('val').value = num;
+        }
+
         uni_val = 0
         //Starter
         const newh1 = document.createElement("h2")
@@ -2032,13 +2136,17 @@ function connect(){
         anotherstep.appendChild(texty3)
         ans.insertBefore(anotherstep, ans.children[uni_val])
 
+        //alert("jotaroo")
         //This
-        val = document.getElementById("val").value
-        
+        val = fixInput
+        reverse = val.split("").reverse().join("")
+        //jojo = reverseString(val)
+        //alert(jojo)
+
         amount = 0-1
         total = 0
-        for (let i = 0; i < val.length; i++) {
-            s2 = val.charAt(i)
+        for (let i = 0; i < reverse.length; i++) {
+            s2 = reverse.charAt(i)
             
             if (s2 == "a" || s2=="A") {
                 s3 = s2.valueOf();
@@ -2252,11 +2360,11 @@ function connect(){
                 div.appendChild(sup)
                 div.appendChild(equalz)
             }*/
-            /*else{// if(s2=='1' || s2=='2' || s2=='3' || s2=='4' || s2=='5' || s2=='6' || s2=='7' || s2=='8' || s2=='9'){
+            else{// if(s2=='1' || s2=='2' || s2=='3' || s2=='4' || s2=='5' || s2=='6' || s2=='7' || s2=='8' || s2=='9'){
                 s3 = s2.valueOf();
                 amount++;
                 anz = Math.pow(16, amount);
-                anss = Math.round(anz)*s2;
+                anss = anz*s3;
                 total=total+anss;
 
                 //Lets make a div
@@ -2271,7 +2379,7 @@ function connect(){
                 suppy = document.createTextNode(amount)
 
                 equalz = document.createElement("h3")
-                textyee = document.createTextNode(" = " + Math.round(0))
+                textyee = document.createTextNode(" = " + Math.round(anss))
                 
                 anotherstep.appendChild(texty3)
                 equalz.appendChild(textyee)
@@ -2280,14 +2388,18 @@ function connect(){
                 div.appendChild(anotherstep)
                 div.appendChild(sup)
                 div.appendChild(equalz)
-            }*/
+            }
         }
+
+
+        
 
         //Just a break line
         uni_val = uni_val + 1
         filler = document.createElement("br")
         ans.insertBefore(filler, ans.children[uni_val])
 
+        /*
         //start solving
         guru = document.getElementById("val").value
         vals = parseInt(guru)
@@ -2301,7 +2413,8 @@ function connect(){
             vals = Math.floor(vals/10);
             i++;
             
-            anz = Math.pow(reverse * 16, i);
+            ror = Math.pow(16,i)
+            anz = ror*reverse
             if (reverse==0 || reverse==0.0) {
                 anz=0.0;
             }
@@ -2336,10 +2449,7 @@ function connect(){
             //ans.insertBefore(anotherstep, ans.children[uni_val])
             //ans.insertBefore(sup, ans.children[uni_val])
         }
-        //Just a break line
-        uni_val = uni_val + 1
-        filler = document.createElement("br")
-        ans.insertBefore(filler, ans.children[uni_val])
+        */
 
         //Another Step
         uni_val = uni_val+1
@@ -2527,10 +2637,21 @@ function connect(){
 
         zip = document.getElementById("val").value.toUpperCase()
         document.getElementById("val").value = zip
+    
 
     }
     //Hex to Octal
     else if (STRING_OPTION_A == "Hex" && STRING_OPTION_B == "Octal") {
+        //restriction characters
+        num = val.toString().toUpperCase();
+        const UNESSESSARY_EXTRA = ["G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+        
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            
+            num = num.replaceAll(element, "");
+            fixInput = document.getElementById('val').value = num;
+        }
         uni_val = 0
         //Starter
         const newh1 = document.createElement("h2")
@@ -2577,12 +2698,17 @@ function connect(){
         ans.insertBefore(anotherstep, ans.children[uni_val])
 
         //This
-        val = document.getElementById("val").value
-        
+        //alert("jotaroo")
+        //This
+        val = fixInput
+        reverse = val.split("").reverse().join("")
+        //jojo = reverseString(val)
+        //alert(jojo)
+
         amount = 0-1
         total = 0
-        for (let i = 0; i < val.length; i++) {
-            s2 = val.charAt(i)
+        for (let i = 0; i < reverse.length; i++) {
+            s2 = reverse.charAt(i)
             
             if (s2 == "a" || s2=="A") {
                 s3 = s2.valueOf();
@@ -2796,11 +2922,11 @@ function connect(){
                 div.appendChild(sup)
                 div.appendChild(equalz)
             }*/
-            /*else{// if(s2=='1' || s2=='2' || s2=='3' || s2=='4' || s2=='5' || s2=='6' || s2=='7' || s2=='8' || s2=='9'){
+            else{// if(s2=='1' || s2=='2' || s2=='3' || s2=='4' || s2=='5' || s2=='6' || s2=='7' || s2=='8' || s2=='9'){
                 s3 = s2.valueOf();
                 amount++;
                 anz = Math.pow(16, amount);
-                anss = Math.round(anz)*s2;
+                anss = anz*s3;
                 total=total+anss;
 
                 //Lets make a div
@@ -2815,7 +2941,7 @@ function connect(){
                 suppy = document.createTextNode(amount)
 
                 equalz = document.createElement("h3")
-                textyee = document.createTextNode(" = " + Math.round(0))
+                textyee = document.createTextNode(" = " + Math.round(anss))
                 
                 anotherstep.appendChild(texty3)
                 equalz.appendChild(textyee)
@@ -2824,7 +2950,7 @@ function connect(){
                 div.appendChild(anotherstep)
                 div.appendChild(sup)
                 div.appendChild(equalz)
-            }*/
+            }
         }
 
         //Just a break line
@@ -3073,6 +3199,17 @@ function connect(){
     }
     //Hex to Decimal
     else if (STRING_OPTION_A == "Hex" && STRING_OPTION_B == "Decimal") {
+        //restriction characters
+        num = val.toString().toUpperCase();
+        const UNESSESSARY_EXTRA = ["G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+        
+        for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+            const element = UNESSESSARY_EXTRA[index];
+            
+            num = num.replaceAll(element, "");
+            fixInput = document.getElementById('val').value = num;
+        }
+        
         uni_val = 0
         //Starter
         const newh1 = document.createElement("h2")
@@ -3112,52 +3249,261 @@ function connect(){
         ans.insertBefore(filler, ans.children[uni_val])
 
         //start solving
-        guru = document.getElementById("val").value
-        vals = parseInt(guru)
+        //alert("jotaroo")
+        //This
+        val = fixInput
+        reverse = val.split("").reverse().join("")
+        //jojo = reverseString(val)
+        //alert(jojo)
 
-        dNum = vals
-        reverse = 0
-        i = -1
-
-        while (vals>0) {
-            reverse = Math.floor(vals%10);
-            vals = Math.floor(vals/10);
-            i++;
+        amount = 0-1
+        total = 0
+        for (let i = 0; i < reverse.length; i++) {
+            s2 = reverse.charAt(i)
             
-            anz = Math.pow(reverse * 16, i);
-            if (reverse==0 || reverse==0.0) {
-                anz=0.0;
-            }
-            //document.getElementById('text').value += "" + reverse + "x8^" + i + " = " + Math.round(ans)+"\n";
-            //Lets make a div
-            uni_val = uni_val + 1
-            div = document.createElement("div")
-            ans.insertBefore(div, ans.children[uni_val])
+            if (s2 == "a" || s2=="A") {
+                s3 = s2.valueOf();
+                s3 = "10";
+                amount ++;
 
-            uni_val = uni_val+1
-            anotherstep = document.createElement("h3")
-            sup = document.createElement("h4")
-            texty3 = document.createTextNode(reverse + " x 16")
-            suppy = document.createTextNode(i)
+                anz = Math.pow(16, amount)
+                anss = Math.round(anz)*10
+                total = total + anss
 
-            equalz = document.createElement("h3")
-            if (i==0) {
-                textyee = document.createTextNode(" = " + reverse)
-            }
-            else{
-                textyee = document.createTextNode(" = " + Math.round(anz))
-            }
-            
-            anotherstep.appendChild(texty3)
-            equalz.appendChild(textyee)
-            sup.appendChild(suppy)
+                //Lets make a div
+                uni_val = uni_val + 1
+                div = document.createElement("div")
+                ans.insertBefore(div, ans.children[uni_val])
 
-            div.appendChild(anotherstep)
-            div.appendChild(sup)
-            div.appendChild(equalz)
-            //ans.insertBefore(anotherstep, ans.children[uni_val])
-            //ans.insertBefore(sup, ans.children[uni_val])
+                uni_val = uni_val+1
+                anotherstep = document.createElement("h3")
+                sup = document.createElement("h4")
+                texty3 = document.createTextNode(s3 + " x 16")
+                suppy = document.createTextNode(i)
+
+                equalz = document.createElement("h3")
+                textyee = document.createTextNode(" = " + Math.round(anss))
+                
+                anotherstep.appendChild(texty3)
+                equalz.appendChild(textyee)
+                sup.appendChild(suppy)
+
+                div.appendChild(anotherstep)
+                div.appendChild(sup)
+                div.appendChild(equalz)
+            }
+            else if (s2 == "b" || s2=="B") {
+                s3 = s2.valueOf();
+                s3 = "11";
+                amount ++;
+
+                anz = Math.pow(16, amount)
+                anss = Math.round(anz)*11
+                total = total + anss
+
+                //Lets make a div
+                uni_val = uni_val + 1
+                div = document.createElement("div")
+                ans.insertBefore(div, ans.children[uni_val])
+
+                uni_val = uni_val+1
+                anotherstep = document.createElement("h3")
+                sup = document.createElement("h4")
+                texty3 = document.createTextNode(s3 + " x 16")
+                suppy = document.createTextNode(i)
+
+                equalz = document.createElement("h3")
+                textyee = document.createTextNode(" = " + Math.round(anss))
+                
+                anotherstep.appendChild(texty3)
+                equalz.appendChild(textyee)
+                sup.appendChild(suppy)
+
+                div.appendChild(anotherstep)
+                div.appendChild(sup)
+                div.appendChild(equalz)
+            }
+            else if (s2 == "c" || s2=="C") {
+                s3 = s2.valueOf();
+                s3 = "12";
+                amount ++;
+
+                anz = Math.pow(16, amount)
+                anss = Math.round(anz)*12
+                total = total + anss
+
+                //Lets make a div
+                uni_val = uni_val + 1
+                div = document.createElement("div")
+                ans.insertBefore(div, ans.children[uni_val])
+
+                uni_val = uni_val+1
+                anotherstep = document.createElement("h3")
+                sup = document.createElement("h4")
+                texty3 = document.createTextNode(s3 + " x 16")
+                suppy = document.createTextNode(i)
+
+                equalz = document.createElement("h3")
+                textyee = document.createTextNode(" = " + Math.round(anss))
+                
+                anotherstep.appendChild(texty3)
+                equalz.appendChild(textyee)
+                sup.appendChild(suppy)
+
+                div.appendChild(anotherstep)
+                div.appendChild(sup)
+                div.appendChild(equalz)
+            }
+            else if (s2 == "d" || s2=="D") {
+                s3 = s2.valueOf();
+                s3 = "13";
+                amount ++;
+
+                anz = Math.pow(16, amount)
+                anss = Math.round(anz)*13
+                total = total + anss
+
+                //Lets make a div
+                uni_val = uni_val + 1
+                div = document.createElement("div")
+                ans.insertBefore(div, ans.children[uni_val])
+
+                uni_val = uni_val+1
+                anotherstep = document.createElement("h3")
+                sup = document.createElement("h4")
+                texty3 = document.createTextNode(s3 + " x 16")
+                suppy = document.createTextNode(i)
+
+                equalz = document.createElement("h3")
+                textyee = document.createTextNode(" = " + Math.round(anss))
+                
+                anotherstep.appendChild(texty3)
+                equalz.appendChild(textyee)
+                sup.appendChild(suppy)
+
+                div.appendChild(anotherstep)
+                div.appendChild(sup)
+                div.appendChild(equalz)
+            }
+            else if (s2 == "e" || s2=="E") {
+                s3 = s2.valueOf();
+                s3 = "14";
+                amount ++;
+
+                anz = Math.pow(16, amount)
+                anss = Math.round(anz)*14
+                total = total + anss
+
+                //Lets make a div
+                uni_val = uni_val + 1
+                div = document.createElement("div")
+                ans.insertBefore(div, ans.children[uni_val])
+
+                uni_val = uni_val+1
+                anotherstep = document.createElement("h3")
+                sup = document.createElement("h4")
+                texty3 = document.createTextNode(s3 + " x 16")
+                suppy = document.createTextNode(i)
+
+                equalz = document.createElement("h3")
+                textyee = document.createTextNode(" = " + Math.round(anss))
+                
+                anotherstep.appendChild(texty3)
+                equalz.appendChild(textyee)
+                sup.appendChild(suppy)
+
+                div.appendChild(anotherstep)
+                div.appendChild(sup)
+                div.appendChild(equalz)
+            }
+            else if (s2 == "f" || s2=="F") {
+                s3 = s2.valueOf();
+                s3 = "15";
+                amount ++;
+
+                anz = Math.pow(16, amount)
+                anss = Math.round(anz)*15
+                total = total + anss
+
+                //Lets make a div
+                uni_val = uni_val + 1
+                div = document.createElement("div")
+                ans.insertBefore(div, ans.children[uni_val])
+
+                uni_val = uni_val+1
+                anotherstep = document.createElement("h3")
+                sup = document.createElement("h4")
+                texty3 = document.createTextNode(s3 + " x 16")
+                suppy = document.createTextNode(i)
+
+                equalz = document.createElement("h3")
+                textyee = document.createTextNode(" = " + Math.round(anss))
+                
+                anotherstep.appendChild(texty3)
+                equalz.appendChild(textyee)
+                sup.appendChild(suppy)
+
+                div.appendChild(anotherstep)
+                div.appendChild(sup)
+                div.appendChild(equalz)
+            }
+            /*else if (s2 == "0") {
+                s3 = s2.valueOf();
+                amount ++;
+
+                //Lets make a div
+                uni_val = uni_val + 1
+                div = document.createElement("div")
+                ans.insertBefore(div, ans.children[uni_val])
+
+                uni_val = uni_val+1
+                anotherstep = document.createElement("h3")
+                sup = document.createElement("h4")
+                texty3 = document.createTextNode(s3 + " x 16")
+                suppy = document.createTextNode(i)
+
+                equalz = document.createElement("h3")
+                textyee = document.createTextNode(" = " + Math.round(0))
+                
+                anotherstep.appendChild(texty3)
+                equalz.appendChild(textyee)
+                sup.appendChild(suppy)
+
+                div.appendChild(anotherstep)
+                div.appendChild(sup)
+                div.appendChild(equalz)
+            }*/
+            else{// if(s2=='1' || s2=='2' || s2=='3' || s2=='4' || s2=='5' || s2=='6' || s2=='7' || s2=='8' || s2=='9'){
+                s3 = s2.valueOf();
+                amount++;
+                anz = Math.pow(16, amount);
+                anss = anz*s3;
+                total=total+anss;
+
+                //Lets make a div
+                uni_val = uni_val + 1
+                div = document.createElement("div")
+                ans.insertBefore(div, ans.children[uni_val])
+
+                uni_val = uni_val+1
+                anotherstep = document.createElement("h3")
+                sup = document.createElement("h4")
+                texty3 = document.createTextNode(s3 + " x 16")
+                suppy = document.createTextNode(amount)
+
+                equalz = document.createElement("h3")
+                textyee = document.createTextNode(" = " + Math.round(anss))
+                
+                anotherstep.appendChild(texty3)
+                equalz.appendChild(textyee)
+                sup.appendChild(suppy)
+
+                div.appendChild(anotherstep)
+                div.appendChild(sup)
+                div.appendChild(equalz)
+            }
         }
+
         //Just a break line
         uni_val = uni_val + 1
         filler = document.createElement("br")
