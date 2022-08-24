@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>WSOL</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style(wsol).css">
+    </head>
+
+    <body>
+        <section id="header">
+            <div id="navbar">
+                <a href="bodh.htm"><h3>Quick Convert</h3></a>
+                <a href="wsol.htm"><h3 id="active">Convert with Solution</h3></a>
+            </div>
+        </section>
+
+        <section id="operator">
+            <div id="box">
+
+                <div id="order">
+                    <select name="converters" id="pd1" class="converter">
+                        <option style="background: white; color: black;" value="binary">Binary</option>
+                        <option style="background: white; color: black;" value="octal">Octal</option>
+                        <option style="background: white; color: black;" value="decimal" selected>Decimal</option>
+                        <option style="background: white; color: black;" value="hex">Hex</option>
+                    </select>
+
+                    <div>
+                        <h3 id="to">To</h3>
+                    </div>
+
+                    <select name="converters" id="pd2" class="converter">
+                        <option style="background: white; color: black;"" value="binary" selected>Binary</option>
+                        <option style="background: white; color: black;" value="octal">Octal</option>
+                        <option style="background: white; color: black;" value="decimal">Decimal</option>
+                        <option style="background: white; color: black;" value="hex">Hex</option>
+                    </select>
+                </div>
+
+                <div id="data">
+                    <input type="text" id="val" placeholder="Input here...">
+                </div>
+                <div id="buttoncontainer">
+                    <button id="con">Convert</button>
+                </div>
+
+                <div id="line"></div>
+                <div id="answer">
+                    <h1 id="extra">Answer will show here...</h1>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="footer">
+            <h1>RCABuilds</h1>
+        </section>
+
+        <script src="javascript/wsolscript.js"></script>
+    </body>
+</html>

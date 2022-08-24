@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(226, 226, 226);
+}
+
+#header{
+    display: flex;
+    background-color: rgb(25, 13, 68);
+    padding: 10px;
+    color: white;
+    font-size: 17px;
+    justify-content: flex-end;
+}
+
+#navbar{
+    display: flex;
+    
+}
+
+#navbar h3{
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+#active{
+    color: rgb(162, 255, 255);
+}
+
+#box{
+    display: flex;
+    flex-direction: column;
+    /*background-color: rgb(25, 13, 68);*/
+    background-color: rgb(36, 22, 87);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    border-radius: 30px;
+    padding-top: 10px;
+}
+
+#box h4{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+#box input{
+    font-size: 24px;
+    padding: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+#buttoncontainer{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*
+#buttoncontainer button{
+    padding: 5px;
+    font-size: 17px;
+    margin-right: 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    background-color: rgb(43, 156, 43);
+}
+*/
+#buttoncontainer button{
+    padding: 3px;
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    font-size: 20px;
+}
+
+#footer{
+    position: fixed;
+    background-color: black;
+    padding: 5px;
+    bottom: 0;
+
+    /* And if you want the div to be full-width: */
+    left: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+}
+
+#footer h1{
+    cursor: pointer;
+}

@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+}
+
+#desclaimer{
+    color: white;
+    border: solid 2px white;
+    padding: 10px;
+    margin-bottom: 0%;
+}
+
+#header img{
+    height: 100px;
+}
+
+#white{
+    background-color: white;
+    height: 1px;
+}
+
+#secret{
+    display: none;
+}
+
+#darth{
+    display: flex;
+    flex-direction: column;
+    /*background-color: red;*/
+}
+
+#star{
+    width: 300px;
+    margin-top: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+#vader{
+    width: 300px;
+    margin-top: -745px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*#vader{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+#darth{
+    background-color: black;
+}
+
+#saber_outline{
+    position: inherit;
+    background-color: transparent;
+    height: 10px;
+    width: 400px;
+    transform: rotate(70deg);
+    margin-top: -60px;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-left: auto;*/
+    border-radius: 20px;
+    
+}
+
+#saber_glow{
+    background-color: red;
+    height: 10px;
+    width: 0%;
+    animation: glow 1s ease-in-out infinite alternate;
+    border-radius: 20px;
+}
+
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+/*
+#setA{
+    width: 80%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 2px solid red;
+}
+
+#setB{
+    background-color: green;
+    height: 50px;
+    width: 0%;
+}
+*/
+
+@media(max-width:387px){
+    #deathstar{
+        display: none;
+    }
+    #secret{
+        display: flex;
+        color: white;
+        text-align: center;
+        margin-top: 300px;
+    }
+}
