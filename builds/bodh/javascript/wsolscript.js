@@ -28,14 +28,37 @@ if (val) {
     val.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
             event.preventDefault();
-            convert()
+
+            dino = document.getElementById("val").value
+            if (dino == "0" || dino == "" || dino == " ") {
+                var board = document.getElementById("answer")
+                var erase = board.lastElementChild;
+                while(erase){
+                    board.removeChild(erase);
+                    erase = board.lastElementChild;
+                }
+            }
+            else{
+                convert()
+            }
         }
     });
 }
 
 if (convert_it) {
     convert_it.addEventListener('click', ()=>{
-        convert()
+        dino = document.getElementById("val").value
+        if (dino == "0" || dino == "" || dino == " ") {
+            var board = document.getElementById("answer")
+            var erase = board.lastElementChild;
+            while(erase){
+                board.removeChild(erase);
+                erase = board.lastElementChild;
+            }
+        }
+        else{
+            convert()
+        }
     })
 }
 
@@ -596,6 +619,108 @@ function connect(){
         anotherstep.appendChild(texty3)
         ans.insertBefore(anotherstep, ans.children[uni_val])
 
+        uni_val = uni_val + 1
+        filler = document.createElement("br")
+        ans.insertBefore(filler, ans.children[uni_val])
+
+        //Another Step
+        uni_val = uni_val+1
+        anotherstep = document.createElement("h3")
+        texty3 = document.createTextNode("Take note about the value of A,B,C,D,E,F, when converting something from or to hexadecimal:")
+        anotherstep.appendChild(texty3)
+        ans.insertBefore(anotherstep, ans.children[uni_val])
+        //making a new div
+        uni_val = uni_val + 1
+        //makediv = document.createElement("div")
+        lamesa = document.createElement("table")
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("A")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("10")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("B")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("11")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("C")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("12")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("D")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("13")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("E")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("14")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("F")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("15")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+        
+
+        ans.insertBefore(lamesa, ans.children[uni_val])
+
+        //Just a break line
         uni_val = uni_val + 1
         filler = document.createElement("br")
         ans.insertBefore(filler, ans.children[uni_val])
@@ -1188,6 +1313,108 @@ function connect(){
         texty3 = document.createTextNode("Then sum all value, and we get " + decimal_value.toString() + ";")
         anotherstep.appendChild(texty3)
         ans.insertBefore(anotherstep, ans.children[uni_val])
+
+        //Just a break line
+        uni_val = uni_val + 1
+        filler = document.createElement("br")
+        ans.insertBefore(filler, ans.children[uni_val])
+
+        //Another Step
+        uni_val = uni_val+1
+        anotherstep = document.createElement("h3")
+        texty3 = document.createTextNode("Take note about the value of A,B,C,D,E,F, when converting something from or to hexadecimal:")
+        anotherstep.appendChild(texty3)
+        ans.insertBefore(anotherstep, ans.children[uni_val])
+        //making a new div
+        uni_val = uni_val + 1
+        //makediv = document.createElement("div")
+        lamesa = document.createElement("table")
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("A")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("10")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("B")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("11")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("C")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("12")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("D")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("13")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("E")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("14")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("F")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("15")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+        
+
+        ans.insertBefore(lamesa, ans.children[uni_val])
 
         //Just a break line
         uni_val = uni_val + 1
@@ -2059,6 +2286,108 @@ function connect(){
         filler = document.createElement("br")
         ans.insertBefore(filler, ans.children[uni_val])
 
+        //Another Step
+        uni_val = uni_val+1
+        anotherstep = document.createElement("h3")
+        texty3 = document.createTextNode("Take note about the value of A,B,C,D,E,F, when converting something from or to hexadecimal:")
+        anotherstep.appendChild(texty3)
+        ans.insertBefore(anotherstep, ans.children[uni_val])
+        //making a new div
+        uni_val = uni_val + 1
+        //makediv = document.createElement("div")
+        lamesa = document.createElement("table")
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("A")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("10")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("B")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("11")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("C")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("12")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("D")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("13")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("E")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("14")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("F")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("15")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+        
+
+        ans.insertBefore(lamesa, ans.children[uni_val])
+
+        //Just a break line
+        uni_val = uni_val + 1
+        filler = document.createElement("br")
+        ans.insertBefore(filler, ans.children[uni_val])
+
         uni_val = uni_val + 1
         anotherstep = document.createElement("h2")
         texty3 = document.createTextNode("So in conclusion:")
@@ -2111,6 +2440,108 @@ function connect(){
         const texty2 = document.createTextNode("Your " + STRING_OPTION_A +" Input was " + input.toUpperCase())
         newval.appendChild(texty2)
         ans.insertBefore(newval, ans.children[uni_val])
+
+        //Just a break line
+        uni_val = uni_val + 1
+        filler = document.createElement("br")
+        ans.insertBefore(filler, ans.children[uni_val])
+
+        //Another Step
+        uni_val = uni_val+1
+        anotherstep = document.createElement("h3")
+        texty3 = document.createTextNode("Take note about the value of A,B,C,D,E,F, when converting something from or to hexadecimal:")
+        anotherstep.appendChild(texty3)
+        ans.insertBefore(anotherstep, ans.children[uni_val])
+        //making a new div
+        uni_val = uni_val + 1
+        //makediv = document.createElement("div")
+        lamesa = document.createElement("table")
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("A")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("10")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("B")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("11")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("C")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("12")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("D")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("13")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("E")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("14")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("F")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("15")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+        
+
+        ans.insertBefore(lamesa, ans.children[uni_val])
 
         //Just a break line
         uni_val = uni_val + 1
@@ -2693,6 +3124,108 @@ function connect(){
         //Another Step
         uni_val = uni_val+1
         anotherstep = document.createElement("h3")
+        texty3 = document.createTextNode("Take note about the value of A,B,C,D,E,F, when converting something from or to hexadecimal:")
+        anotherstep.appendChild(texty3)
+        ans.insertBefore(anotherstep, ans.children[uni_val])
+        //making a new div
+        uni_val = uni_val + 1
+        //makediv = document.createElement("div")
+        lamesa = document.createElement("table")
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("A")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("10")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("B")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("11")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("C")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("12")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("D")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("13")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("E")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("14")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("F")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("15")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+        
+
+        ans.insertBefore(lamesa, ans.children[uni_val])
+
+        //Just a break line
+        uni_val = uni_val + 1
+        filler = document.createElement("br")
+        ans.insertBefore(filler, ans.children[uni_val])
+
+        //Another Step
+        uni_val = uni_val+1
+        anotherstep = document.createElement("h3")
         texty3 = document.createTextNode("List all the numbers from last to first and then multiply it by 16 with an exponent of sequenced number!")
         anotherstep.appendChild(texty3)
         ans.insertBefore(anotherstep, ans.children[uni_val])
@@ -3230,6 +3763,108 @@ function connect(){
         const texty2 = document.createTextNode("Your " + STRING_OPTION_A +" Input was " + input.toUpperCase())
         newval.appendChild(texty2)
         ans.insertBefore(newval, ans.children[uni_val])
+
+        //Just a break line
+        uni_val = uni_val + 1
+        filler = document.createElement("br")
+        ans.insertBefore(filler, ans.children[uni_val])
+
+        //Another Step
+        uni_val = uni_val+1
+        anotherstep = document.createElement("h3")
+        texty3 = document.createTextNode("Take note about the value of A,B,C,D,E,F, when converting something from or to hexadecimal:")
+        anotherstep.appendChild(texty3)
+        ans.insertBefore(anotherstep, ans.children[uni_val])
+        //making a new div
+        uni_val = uni_val + 1
+        //makediv = document.createElement("div")
+        lamesa = document.createElement("table")
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("A")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("10")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("B")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("11")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("C")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("12")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("D")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("13")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("E")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("14")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+
+        tapa = document.createElement("tr")
+        lamesa.appendChild(tapa)
+
+        A = document.createElement("td")
+        a = document.createTextNode("F")
+        Aval = document.createElement("td")
+        aval = document.createTextNode("15")
+
+        A.appendChild(a)
+        Aval.appendChild(aval)
+
+        tapa.appendChild(A)
+        tapa.appendChild(Aval)
+        
+
+        ans.insertBefore(lamesa, ans.children[uni_val])
 
         //Just a break line
         uni_val = uni_val + 1
