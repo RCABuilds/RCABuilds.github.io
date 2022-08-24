@@ -40,7 +40,7 @@ body{
     display: flex;
     flex-direction: column;
     /*background-color: rgb(25, 13, 68);*/
-    background-color: rgb(36, 22, 87);
+    background-color: rgb(58, 45, 105);
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -112,4 +112,138 @@ body{
 
 #footer h1{
     cursor: pointer;
+}
+
+/*Extra*/
+.container {
+    display: none;
+    /*display: inline-block;*/
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+@media (max-width:1669px) {
+    #box{
+        width: 70%;
+    }
+}
+
+@media (max-width:1669px) {
+    #box{
+        width: 70%;
+    }
+}
+
+@media (max-width:1400px) {
+    #box{
+        width: 80%;
+    }
+}
+
+@media (max-width:1255px) {
+    #box{
+        width: 90%;
+    }
+}
+
+@media (max-width:600px) {
+    #navbar{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        /*display: none;*/
+        margin-top: 50px;
+        margin-right: -1000px;
+        background-color: rgb(226, 226, 226);
+        width: 300px;
+        height: 300rem;
+        transition: 0.3s ease;
+        text-align: center;
+        
+    }
+    #navbar h3{
+        color:black;
+    }
+
+    #navbar #active{
+        color:rgb(2, 60, 104);
+    }
+
+    #separator{
+        background-color: black;
+        height: 1px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #buttoncontainer button{
+        font-size: 24px;
+    }
+
+    body{
+        background-color: rgb(58, 45, 105);
+    }
+    #box{
+        background-color: transparent;
+        width: 100%;
+    }
+    .container {
+        display: inline-block;
+    }
+}
+
+@media (max-width:500px) {
+    body{
+        background-color: rgb(58, 45, 105);
+    }
+    #box{
+        background-color: transparent;
+        width: 100%;
+    }
+    #box h4{
+        font-size: 20px;
+    }
+    #box input{
+        font-size: 20px;
+    }
+    #buttoncontainer button{
+        font-size: 17px;
+    }
+}
+
+@media (max-width:160px) {
+    body{
+        background-color: rgb(58, 45, 105);
+    }
+    #box{
+        background-color: transparent;
+        width: 100%;
+    }
+    #box h4{
+        font-size: 13px;
+    }
+    #box input{
+        font-size: 13px;
+    }
+    #buttoncontainer button{
+        font-size: 15px;
+    }
 }
