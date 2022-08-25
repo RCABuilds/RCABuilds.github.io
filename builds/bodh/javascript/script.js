@@ -41,11 +41,29 @@ if (binary) {
         if (event.key === "Enter") {
             event.preventDefault();
 
+            num = document.getElementById("binary").value
+            ror = num.toString().toUpperCase()
+
+            //alert(ror)
+
+            const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\', "2", "3", "4", "5", "6", "7", "8", "9"]
+            for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+                const element = UNESSESSARY_EXTRA[index];
+                ror = ror.replaceAll(element, "")
+                fixInput = document.getElementById("binary").value = ror
+            }
+
             octal.value = ""
             decimal.value = ""
             hex.value = ""
 
             convert()
+            if (octal.value=="NAN"|| octal.value == "NaN") {
+                binary.value = ""
+                octal.value = ""
+                decimal.value = ""
+                hex.value = ""
+            }
         }
     });
 }
@@ -57,13 +75,28 @@ if (octal) {
     })
     octal.addEventListener("keypress", function(event) {
         if (event.key === "Enter") {
-            event.preventDefault();
 
+            xoxo = document.getElementById("octal").value
+            jojo = xoxo.toString().toUpperCase()
+            const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+
+            for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+                const element = UNESSESSARY_EXTRA[index];
+                jojo = jojo.replaceAll(element, "")
+
+                giorno = document.getElementById("octal").value = jojo
+            }
             binary.value = ""
             decimal.value = ""
             hex.value = ""
 
             convert()
+            if (octal.value=="NAN"|| octal.value == "NaN") {
+                binary.value = ""
+                octal.value = ""
+                decimal.value = ""
+                hex.value = ""
+            }
         }
     });
 }
@@ -77,11 +110,26 @@ if (decimal) {
         if (event.key === "Enter") {
             event.preventDefault();
 
+            popo = document.getElementById("decimal").value
+            jolly = popo.toString().toUpperCase()
+            const UNESSESSARY_EXTRA = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+            for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+                const element = UNESSESSARY_EXTRA[index];
+                jolly = jolly.replaceAll(element, "")
+                yum = document.getElementById("decimal").value = jolly
+            }
+
             binary.value = ""
             octal.value = ""
             hex.value = ""
 
             convert()
+            if (octal.value=="NAN"|| octal.value == "NaN") {
+                binary.value = ""
+                octal.value = ""
+                decimal.value = ""
+                hex.value = ""
+            }
         }
     });
 }
@@ -95,11 +143,28 @@ if (hex) {
         if (event.key === "Enter") {
             event.preventDefault();
 
+            coco = document.getElementById("hex").value
+            jumbo = coco.toString().toUpperCase()
+            
+            const UNESSESSARY_EXTRA = ["G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[" , "]" , "{" , "}" , ";" , ":" , "<" , "," , "." , ">" , "?" , "/", "'", '"', "|", '\\']
+
+            for (let index = 0; index < UNESSESSARY_EXTRA.length; index++) {
+                const element = UNESSESSARY_EXTRA[index];
+                jumbo = jumbo.replaceAll(element, "")
+                jinx = document.getElementById("hex").value = jumbo
+            }
+
             binary.value = ""
             octal.value = ""
             decimal.value = ""
 
             convert()
+            if (octal.value=="NAN"|| octal.value == "NaN") {
+                binary.value = ""
+                octal.value = ""
+                decimal.value = ""
+                hex.value = ""
+            }
         }
     });
 }
