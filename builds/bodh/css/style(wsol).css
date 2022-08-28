@@ -103,6 +103,10 @@ body{
     margin-right: auto;
     width: 80%;
     border-radius: 10px;  
+
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
 }
 
 #buttoncontainer{

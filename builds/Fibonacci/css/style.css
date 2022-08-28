@@ -1,0 +1,217 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(226, 226, 226);
+}
+
+#header{
+    display: flex;
+    background-color: rgb(25, 13, 68);
+    padding: 10px;
+    color: white;
+    font-size: 17px;
+    justify-content: space-between;
+}
+
+#board{
+    background-color: rgb(58, 45, 105);
+    height: fit-content;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+#scan{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+}
+
+#scan input{
+    height: 30px;
+    width: 150px;
+    font-size: 20px;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#scan button{
+    background-color: transparent;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    border: 1px solid white;
+    width: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#line{
+    background-color: white;
+    height: 2px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#buttoncontainer{
+    display: flex;
+    justify-content: center;
+}
+
+#buttoncontainer button{
+    background-color: transparent;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+    width: 500px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#answer{
+    padding-bottom: 3px;
+}
+
+#answer h1{
+    text-align: center;
+    color: white;
+}
+
+#answer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: transparent;
+    border: 1px white solid;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+#answer div div{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#answer div div h2{
+    padding-top: 8px;
+}
+
+#answer div div div{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+#answer div div div h2{
+    margin: 0;
+}
+
+#answer div h1{
+    background-color: rgb(58, 45, 105);
+    width: fit-content;
+    margin-top: -15px;
+    margin-left: 15px;
+}
+
+#answer div div h2{
+    margin-top: -15px;
+    margin-left: 2px;
+}
+
+#answer div div h4{
+    margin-top: 3px;
+}
+
+@media (max-width:1669px) {
+    #board{
+        width: 70%;
+    }
+}
+
+@media (max-width:1400px) {
+    #board{
+        width: 80%;
+    }
+}
+
+@media (max-width:1255px) {
+    #board{
+        width: 90%;
+    }
+}
+
+
+@media (max-width:600px) {
+
+    body{
+        background-color: rgb(58, 45, 105);
+    }
+    #board{
+        background-color: transparent;
+        width: 100%;
+    }
+
+}
+
+@media (max-width:500px) {
+    #pd1, #pd2{
+        font-size: 17px;
+    }
+    #data input{
+        font-size: 20px;
+    }
+    #buttoncontainer button{
+        font-size: 20px;
+    }
+    #answer h2{
+        font-size: 20px;
+    }
+    #answer h3{
+        font-size: 17px;
+    }
+    #answer h4{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:300px) {
+    #order{
+        flex-direction: column;
+        width: 80%;
+        text-align: center;
+    }
+    #pd1, #pd2{
+        width: 300pxs;
+        margin: 0;
+        
+    }
+    #order h3{
+        padding: 0;
+    } 
+    #data input{
+        margin-top: 10px;
+    }
+}
