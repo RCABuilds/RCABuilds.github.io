@@ -1,0 +1,89 @@
+{
+    "1B":{
+        "Sub1":{
+            "subject":"Computer Programming 2",
+            "Teacher":"Cunanan, M.F. III",
+            "Time":["07:00 am", "08:00 am"],
+            "Day":["Monday", "Tuesday", "Wednesday"],
+            "Room":"CL1",
+            "Class":"V0166",
+            "Code": "CC 103"
+        },
+        "Sub2":{
+            "subject":"Fundamentals of Rhytmic Activities",
+            "Teacher":"Mr. Galanta J.",
+            "Time":["07:00 am", "09:00 am"],
+            "Day":["Thursday"],
+            "Room":"ACGYM",
+            "Class":"V0163",
+            "Code": "PE 2"
+        },
+        "Sub3":{
+            "subject":"Science, Technology and Society",
+            "Teacher":"Ms. Talingdan E.",
+            "Time":["08:00 am", "09:00 am"],
+            "Day":["Monday", "Tuesday", "Wednesday"],
+            "Room":"HAB 104",
+            "Class":"V0159",
+            "Code": "GEC 7"
+        },
+        "Sub4":{
+            "subject":"Discrete Mathematics",
+            "Teacher":"Fronda, J.",
+            "Time":["10:00 am", "11:00 am"],
+            "Day":["Monday", "Tuesday", "Wednesday"],
+            "Room":"CL1",
+            "Class":"V0165",
+            "Code": "MS 101 "
+            
+        },
+        "Sub5":{
+            "subject":"National Service Training Program 2",
+            "Teacher":"Mr. Agustin, N.",
+            "Time":["10:00 am", "01:00 pm"],
+            "Day":["Saturday"],
+            "Room":"AVR",
+            "Class":"V0167",
+            "Code": "NSTP 2.1"
+        },
+        "Sub6":{
+            "subject":"Arts Appreciation",
+            "Teacher":"Ms. Cainar M.",
+            "Time":["01:00 pm", "02:00 pm"],
+            "Day":["Thursday", "Friday", "Saturday"],
+            "Room":"HAB 103",
+            "Class":"V0161",
+            "Code": "GEC 6"
+        },
+
+        "Sub7":{
+            "subject":"Gender and Society",
+            "Teacher":"Mr. Alcodia R.",
+            "Time":["02:00 pm", "03:00 "],
+            "Day":["Thursday", "Friday", "Saturday"],
+            "Room":"CEIT 103",
+            "Class":"V0160",
+            "Code": "GEE9"
+        },
+
+
+        "Sub8":{
+            "subject":"Ethics",
+            "Teacher":"Ms. Salvacion VB.",
+            "Time":["02:00 pm", "03:00 pm"],
+            "Day":["Monday", "Tuesday", "Wednesday"],
+            "Room":"HAB 103",
+            "Class":"V0162",
+            "Code": "GEC 8"
+        },
+        "Sub9":{
+            "subject":"Intro to Human Computer Interaction",
+            "Teacher":"Mr. Komura. JS",
+            "Time":["04:00 pm", "05:00 pm"],
+            "Day":["Monday", "Tuesday", "Wednesday"],
+            "Room":"CL3",
+            "Class":"V0164",
+            "Code": "HCI 101 "
+        }
+    }
+}
