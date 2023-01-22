@@ -1,1 +1,0 @@
-window.open("bill.htm", "_self")
