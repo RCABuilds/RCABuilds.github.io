@@ -75,3 +75,23 @@
     margin-top: -5px;
 
 }
+
+@media(max-width:879px){
+    #schedule div  img{
+        display: none;
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media(max-width:530px){
+    #schedule div ul{
+        font-size: 30px;
+    }
+}
+
+@media(max-width:460px){
+    #schedule div ul section{
+        display: block;
+    }
+}
