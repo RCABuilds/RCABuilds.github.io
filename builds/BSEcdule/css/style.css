@@ -19,7 +19,7 @@
     margin: 10px;
     border-radius: 7px;
     padding: 10px;
-    width: 40%;/*800px;*/
+    width: 50%;/*800px;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -84,7 +84,7 @@
     border: solid white 3px;
     padding: 5px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 #down_deck ol{
     background-color: transparent;
@@ -93,4 +93,18 @@
     border-radius: 10px;
     padding: 5px;
     margin: 3px;
+}
+
+@media(max-width:1550px){
+    #cone{
+        width: 60%;/*800px;*/
+
+    }
+}
+
+@media(max-width:1335px){
+    #cone{
+        width: 70%;/*800px;*/
+
+    }
 }
