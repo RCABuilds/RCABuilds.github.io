@@ -11,6 +11,7 @@
     font-weight: bolder;
     font-size: 50px;
     padding: 50px;    
+    
 }
 
 #cone{
@@ -18,7 +19,7 @@
     margin: 10px;
     border-radius: 7px;
     padding: 10px;
-    width: 800px;
+    width: 40%;/*800px;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -68,7 +69,7 @@
 }
 
 #imgx{    
-    width: 500px;
+    width: 80%;
     padding: 5px;
     background-color: white;
     border-radius: 5px;
@@ -79,5 +80,17 @@
 }
 
 #down_deck{
-    background-color: pink;
+    background-color: transparent;
+    border: solid white 3px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+#down_deck ol{
+    background-color: transparent;
+    border: solid white 3px;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 3px;
 }
