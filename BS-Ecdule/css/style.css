@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#rott{/*This is the Header Part*/
+    color: red;
+    background-color: blue;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+    padding: 50px;    
+}
+
+#cone{
+    background-color: black;
+    margin: 10px;
+    border-radius: 7px;
+    padding: 10px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#layerA000{
+    display: flex;
+    flex-direction: row;
+}
+#subjects{
+    background-color: white;
+    margin: 3px;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 5px;
+}
+#teacher{
+    background-color: white;
+    margin: 3px;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+#ww{
+    display: flex;
+    flex-direction: row;    
+}
+#room{
+    background-color: yellow;    
+    padding: 5px;
+    width: fit-content;
+    border-radius: 5px;
+    margin: 5px;
+}
+#time{
+    width: fit-content;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: row;       
+}
+#time_start, #time_end{
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px;
+    margin: 5px;
+}
+
+#imgx{    
+    width: 500px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+#down_deck{
+    background-color: pink;
+}
