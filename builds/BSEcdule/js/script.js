@@ -18,9 +18,11 @@ fetch('data/bsit-1B.json')
         console.error('Error:', error);
     });
 
+    
 function displaySchedule(){
     constructor()
 }
+
 
 function constructor(){
     dataFetch()
@@ -32,7 +34,7 @@ function constructor(){
 
 function dataFetch(){
     let main_section = document.getElementById("main_section")
-    let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let scheduleData = data["BSIT_1B"];
     for(i = 0; i < days.length; i++){        
         let weekject = document.createElement("ol");
@@ -105,7 +107,6 @@ function dataFetch(){
     }
 }
 
-
 class uni_vars{
     days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     Subday = ["SubSunday", "SubMonday", "SubTuesday", "SubWednesday", "SubThursday", "SubFriday", "SubSaturday"];
@@ -132,12 +133,16 @@ function weekSort(){
     let access = new uni_vars()    
     let today = access.today()
         
-    for(i = 1; i < access.days.length; i++){
+    for(i = 0; i < access.days.length; i++){
         let whatDay = access.days[i]        
         if (whatDay == today) {
+            console.log("--> Today")
+            console.log(whatDay)
             document.getElementById(whatDay).style.display = ""
         }
         else{
+            console.log("--> Not Today")
+            console.log(whatDay)
             document.getElementById(whatDay).style.display = "none"
         }
     }
@@ -195,7 +200,7 @@ function functionX(){
                             document.documentElement.scrollTop = 0;
                             document.getElementById("Sub" + currentDay).classList.remove("today")
                             document.getElementById(currentDay).style.display = "none"
-                        } catch (error) {
+                        } catch (Uncaught) {
                             
                         }
                     }
