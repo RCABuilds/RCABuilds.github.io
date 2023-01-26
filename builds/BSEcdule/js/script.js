@@ -1,4 +1,5 @@
 let data;
+let section = document.title
 
 let mon = document.getElementById("Monday")
 let tue = document.getElementById("Tuesday")
@@ -7,7 +8,7 @@ let thu = document.getElementById("Thursday")
 let fri = document.getElementById("Friday")
 let sat = document.getElementById("Saturday")
 
-fetch('data/bsit-1B.json')
+fetch('data/' + section + ".json")
     .then(response => response.json())
     .then(jsonData => {
         data = jsonData;
@@ -25,12 +26,49 @@ function displaySchedule(){
 
 
 function constructor(){
-    dataFetch()
+    dataFetch2()
     controlWeek(true)
     footer()
     functionX()
 }
 
+class uni_vars{
+    days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    Subday = ["SubSunday", "SubMonday", "SubTuesday", "SubWednesday", "SubThursday", "SubFriday", "SubSaturday"];
+
+    today(){
+        let days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let today = new Date();
+        let day = days[today.getDay()];
+        return day;
+    }
+    
+}
+
+function dataFetch2(){
+    let acc = new uni_vars()
+    let main_section = document.getElementById("main_section")
+    let scheduleData = data[document.title]; console.log(document.title)
+    for(i = 0; i < acc.days.length; i++){
+        let containers = document.createElement("ol")                
+        let header = document.createElement("div")
+        header.innerHTML = acc.days[i]
+        containers.id = acc.days[i]
+        header.id = "header"
+        containers.appendChild(header)
+        main_section.appendChild(containers)
+
+        
+        for(let sub in scheduleData){
+            if(scheduleData[sub]['Day'].includes(acc.days[i])){
+                let sub_box = document.createElement("div")
+                sub_box.id = "sub_box"
+                containers.appendChild(sub_box)
+            }
+        }
+    }
+    
+}
 
 function dataFetch(){
     let main_section = document.getElementById("main_section")
@@ -107,18 +145,6 @@ function dataFetch(){
     }
 }
 
-class uni_vars{
-    days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    Subday = ["SubSunday", "SubMonday", "SubTuesday", "SubWednesday", "SubThursday", "SubFriday", "SubSaturday"];
-
-    today(){
-        let days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        let today = new Date();
-        let day = days[today.getDay()];
-        return day;
-    }
-    
-}
 
 function controlWeek(ba){
     if (ba == true) {
@@ -136,13 +162,13 @@ function weekSort(){
     for(i = 0; i < access.days.length; i++){
         let whatDay = access.days[i]        
         if (whatDay == today) {
-            console.log("--> Today")
-            console.log(whatDay)
+            //console.log("--> Today")
+            //console.log(whatDay)
             document.getElementById(whatDay).style.display = ""
         }
         else{
-            console.log("--> Not Today")
-            console.log(whatDay)
+            //console.log("--> Not Today")
+            //console.log(whatDay)
             document.getElementById(whatDay).style.display = "none"
         }
     }
@@ -187,7 +213,7 @@ function functionX(){
                     //console.log(subs.textContent)
                     let which = subs.textContent
                     let currentDay = acc.days[i]
-                    let day = document.getElementById(acc.days[i])
+                    //let day = document.getElementById(acc.days[i])
                     //console.log(which + " " + currentDay)
                     if (which == currentDay) {
                         //console.log("You clicked " + currentDay)
@@ -201,7 +227,7 @@ function functionX(){
                             document.getElementById("Sub" + currentDay).classList.remove("today")
                             document.getElementById(currentDay).style.display = "none"
                         } catch (Uncaught) {
-                            
+
                         }
                     }
                 }

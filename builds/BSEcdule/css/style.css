@@ -3,8 +3,7 @@
     padding: 0;
 }
 
-#rott{/*This is the Header Part*/
-    color: red;
+#header{/*This is the Header Part*/
     background-color: blue;
     text-align: center;
     color: white;
@@ -14,7 +13,7 @@
     
 }
 
-#cone{
+#sub_box{
     background-color: black;
     margin: 10px;
     border-radius: 7px;
