@@ -107,11 +107,11 @@ function dataFetch(){
 
 
 class uni_vars{
-    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     Subday = ["SubSunday", "SubMonday", "SubTuesday", "SubWednesday", "SubThursday", "SubFriday", "SubSaturday"];
 
     today(){
-        let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let days = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         let today = new Date();
         let day = days[today.getDay()];
         return day;
