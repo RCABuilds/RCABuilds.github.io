@@ -2,7 +2,7 @@
     "BSIT_1B":{
         "Sub1":{
             "subject":"Computer Programming 2",
-            "Teacher":"Cunanan, M.F. III",
+            "Teacher":"New Instructor",
             "Time":["07:00 am", "08:00 am"],
             "Day":["Monday", "Tuesday", "Wednesday"],
             "Room":"CL1",
@@ -11,8 +11,8 @@
         },
         "Sub2":{
             "subject":"Fundamentals of Rhytmic Activities",
-            "Teacher":"Mr. Galanta J.",
-            "Time":["07:00 am", "09:00 am"],
+            "Teacher":"Mr. Joven O. Galanta",
+            "Time":["08:00 am", "10:00 am"],
             "Day":["Thursday"],
             "Room":"ACGYM",
             "Class":"V0163",
@@ -29,7 +29,7 @@
         },
         "Sub4":{
             "subject":"Discrete Mathematics",
-            "Teacher":"Fronda, J.",
+            "Teacher":"New Instructor",
             "Time":["10:00 am", "11:00 am"],
             "Day":["Monday", "Tuesday", "Wednesday"],
             "Room":"CL1",
@@ -48,7 +48,7 @@
         },
         "Sub6":{
             "subject":"Arts Appreciation",
-            "Teacher":"Ms. Cainar M.",
+            "Teacher":"Mr. Rene Rey Alcodia",
             "Time":["01:00 pm", "02:00 pm"],
             "Day":["Thursday", "Friday", "Saturday"],
             "Room":"HAB 103",
@@ -57,17 +57,6 @@
         },
 
         "Sub7":{
-            "subject":"Gender and Society",
-            "Teacher":"Mr. Alcodia R.",
-            "Time":["02:00 pm", "03:00 "],
-            "Day":["Thursday", "Friday", "Saturday"],
-            "Room":"CEIT 103",
-            "Class":"V0160",
-            "Code": "GEE9"
-        },
-
-
-        "Sub8":{
             "subject":"Ethics",
             "Teacher":"Ms. Salvacion VB.",
             "Time":["02:00 pm", "03:00 pm"],
@@ -76,9 +65,20 @@
             "Class":"V0162",
             "Code": "GEC 8"
         },
+
+        "Sub8":{
+            "subject":"Gender and Society",
+            "Teacher":"Mr. Rene Rey Alcodia",
+            "Time":["03:00 pm", "4:00 pm"],
+            "Day":["Thursday", "Friday", "Saturday"],
+            "Room":"CEIT 103",
+            "Class":"V0160",
+            "Code": "GEE9"
+        },
+
         "Sub9":{
             "subject":"Intro to Human Computer Interaction",
-            "Teacher":"Mr. Komura. JS",
+            "Teacher":"New Instructor",
             "Time":["04:00 pm", "05:00 pm"],
             "Day":["Monday", "Tuesday", "Wednesday"],
             "Room":"CL3",

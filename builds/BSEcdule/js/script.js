@@ -25,6 +25,8 @@ function displaySchedule(){
 function constructor(){
     dataFetch()
     controlWeek(true)
+    footer()
+    functionX()
 }
 
 
@@ -132,6 +134,7 @@ function weekSort(){
         thu.style.display = "none"
         fri.style.display = "none"
         sat.style.display = "none"
+
     }
     else if (day == "Tuesday") {
         mon.style.display = "none";
@@ -156,5 +159,193 @@ function weekSort(){
         thu.style.display = ""
         fri.style.display = "none"
         sat.style.display = "none"
+
+        //sub_thu.style.color = "black"
+        //sub_thu.style.background = "white"
+    }
+    else if (day == "Friday") {
+        mon.style.display = "none";
+        tue.style.display = "none"
+        wed.style.display = "none"
+        thu.style.display = "none"
+        fri.style.display = ""
+        sat.style.display = "none"
+    }
+    else if (day == "Saturday") {
+        mon.style.display = "none";
+        tue.style.display = "none"
+        wed.style.display = "none"
+        thu.style.display = "none"
+        fri.style.display = "none"
+        sat.style.display = ""
+    }
+}
+
+class uni_vars{
+    days = ["All Week", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    Subday = ["SubSunday", "SubMonday", "SubTuesday", "SubWednesday", "SubThursday", "SubFriday", "SubSaturday"];
+
+    today(){
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let today = new Date();
+        let day = days[today.getDay()];
+        return day;
+    }
+}
+
+function footer (){
+    let footer = document.getElementById("footer")
+    acc = new uni_vars()
+    let week = document.createElement("ul")
+    week.id = "linggo"
+    let today = acc.today()
+    for(i = 0; i < acc.days.length; i++){
+        let day = document.createElement("li")
+        day.innerHTML = acc.days[i]
+        day.className = "araw"
+        day.id = "Sub" + acc.days[i]
+        if ("Sub" + today == "Sub" + acc.days[i]){
+            day.classList.add("today")
+        }
+        else{
+            day.classList.remove("today")
+        }
+        week.appendChild(day)
+
+    }
+    
+    footer.appendChild(week)
+    
+}
+
+function functionX(){
+    const foot_sun = document.getElementById("SubAll Week")
+    const foot_mon = document.getElementById("SubMonday")
+    const foot_tue = document.getElementById("SubTuesday")
+    const foot_wed = document.getElementById("SubWednesday")
+    const foot_thu = document.getElementById("SubThursday")
+    const foot_fri = document.getElementById("SubFriday")
+    const foot_sat = document.getElementById("SubSaturday")
+
+    acc = new uni_vars()
+    let mon = document.getElementById("Monday")
+    let tue = document.getElementById("Tuesday")
+    let wed = document.getElementById("Wednesday")
+    let thu = document.getElementById("Thursday")
+    let fri = document.getElementById("Friday")
+    let sat = document.getElementById("Saturday")
+    if (foot_mon) {
+        foot_mon.addEventListener('click', () =>{
+            mon.style.display = "";
+            tue.style.display = "none"
+            wed.style.display = "none"
+            thu.style.display = "none"
+            fri.style.display = "none"
+            sat.style.display = "none"
+
+            if (foot_mon.textContent == "Monday") {
+                foot_mon.classList.add("today")
+                foot_tue.classList.remove("today")
+                foot_wed.classList.remove("today")
+                foot_thu.classList.remove("today")
+                foot_fri.classList.remove("today")
+                foot_sat.classList.remove("today")
+            }
+        })
+    }
+    if (foot_tue) {
+        foot_tue.addEventListener('click', () =>{
+            mon.style.display = "none";
+            tue.style.display = ""
+            wed.style.display = "none"
+            thu.style.display = "none"
+            fri.style.display = "none"
+            sat.style.display = "none"
+
+            if (foot_tue.textContent == "Tuesday") {
+                foot_mon.classList.remove("today")
+                foot_tue.classList.add("today")
+                foot_wed.classList.remove("today")
+                foot_thu.classList.remove("today")
+                foot_fri.classList.remove("today")
+                foot_sat.classList.remove("today")
+            }
+        })
+    }
+    if (foot_wed) {
+        foot_wed.addEventListener('click', () =>{
+            mon.style.display = "none";
+            tue.style.display = "none"
+            wed.style.display = ""
+            thu.style.display = "none"
+            fri.style.display = "none"
+            sat.style.display = "none"
+
+            if (foot_wed.textContent == "Wednesday") {
+                foot_mon.classList.remove("today")
+                foot_tue.classList.remove("today")
+                foot_wed.classList.add("today")
+                foot_thu.classList.remove("today")
+                foot_fri.classList.remove("today")
+                foot_sat.classList.remove("today")
+            }
+        })
+    }
+    if (foot_thu) {
+        foot_thu.addEventListener('click', () =>{
+            mon.style.display = "none";
+            tue.style.display = "none"
+            wed.style.display = "none"
+            thu.style.display = ""
+            fri.style.display = "none"
+            sat.style.display = "none"
+
+            if (foot_thu.textContent == "Thursday") {
+                foot_mon.classList.remove("today")
+                foot_tue.classList.remove("today")
+                foot_wed.classList.remove("today")
+                foot_thu.classList.add("today")
+                foot_fri.classList.remove("today")
+                foot_sun.classList.remove("today")
+            }
+        })
+    }
+    if (foot_fri) {
+        foot_fri.addEventListener('click', () =>{
+            mon.style.display = "none";
+            tue.style.display = "none"
+            wed.style.display = "none"
+            thu.style.display = "none"
+            fri.style.display = ""
+            sat.style.display = "none"
+
+            if (foot_fri.textContent == "Friday") {
+                foot_mon.classList.remove("today")
+                foot_tue.classList.remove("today")
+                foot_wed.classList.remove("today")
+                foot_thu.classList.remove("today")
+                foot_fri.classList.add("today")
+                foot_sat.classList.remove("today")
+            }
+        })
+    }
+    if (foot_sat) {
+        foot_sat.addEventListener('click', () =>{
+            mon.style.display = "none";
+            tue.style.display = "none"
+            wed.style.display = "none"
+            thu.style.display = "none"
+            fri.style.display = "none"
+            sat.style.display = ""
+
+            if (foot_sat.textContent == "Saturday") {
+                foot_mon.classList.remove("today")
+                foot_tue.classList.remove("today")
+                foot_wed.classList.remove("today")
+                foot_thu.classList.remove("today")
+                foot_fri.classList.remove("today")
+                foot_sat.classList.add("today")
+            }
+        })
     }
 }

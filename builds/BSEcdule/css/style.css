@@ -95,6 +95,37 @@
     margin: 3px;
 }
 
+#footer{
+    background-color: black;
+    color: black;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+#linggo{
+    background-color: transparent;
+    width:max-content;
+    padding: 10px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.araw{
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    list-style: none;
+    cursor: pointer;
+
+}
+.today, .araw:hover{
+    background-color: white;
+    color: black;
+}
+
 @media(max-width:1550px){
     #cone{
         width: 60%;/*800px;*/
