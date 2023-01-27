@@ -34,6 +34,14 @@
     width: fit-content;
     border-radius: 5px;
 }
+
+#imgx{    
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    margin: 3px;
+}
+
 #teacher{
     background-color: white;
     margin: 3px;
@@ -67,16 +75,7 @@
     margin: 5px;
 }
 
-#imgx{    
-    width: 80%;
-    padding: 5px;
-    background-color: white;
-    border-radius: 5px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5px;
-}
+
 
 #down_deck{
     background-color: transparent;
@@ -98,8 +97,8 @@
     background-color: black;
     color: black;
     width: 100%;
-    position: sticky;
-    bottom: 0;
+    /*position: sticky;
+    bottom: 0;*/
 }
 #linggo{
     background-color: transparent;

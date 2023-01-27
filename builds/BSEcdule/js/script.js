@@ -67,6 +67,13 @@ function dataFetch2(){
                 let layer = document.createElement("div")
                 sub_box.appendChild(layer)
                 layer.id = "layer"
+
+
+                //image deck
+                let imgx = document.createElement("img")
+                imgx.id = "imgx"
+                imgx.src = "img/subs/" + scheduleData[sub]['subject'] + ".png"
+                layer.appendChild(imgx)
                 
                 //Subject
                 let subject = document.createElement("h4")
