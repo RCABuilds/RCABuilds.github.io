@@ -220,3 +220,24 @@ function functionX(){
         }
     }
 }
+
+const touch = document.getElementById("touch")
+const nav = document.getElementById("linggo")
+ziggy = 0
+
+function myFunction(x) {
+    x.classList.toggle("change");
+  }
+  if (touch) {
+    touch.addEventListener('click', () =>{
+        //console.log(nav)
+        if (ziggy == 0) {
+            document.getElementById("linggo").classList.add("active")      
+            ziggy = 1
+        }
+        else if(ziggy == 1){
+            document.getElementById("linggo").classList.remove("active")      
+            ziggy = 0
+        }
+    })
+}
