@@ -166,6 +166,12 @@
     }
 }
 
+@media(max-width:670px){
+    #linggo{
+        display: none;
+    }
+}
+
 @media(max-width:750px){
     #sub_box{
         width: 90%;/*800px;*/
