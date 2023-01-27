@@ -23,7 +23,7 @@
     margin-right: auto;
 }
 
-#layerA000{
+#layer{
     display: flex;
     flex-direction: row;
 }

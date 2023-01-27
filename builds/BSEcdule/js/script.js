@@ -64,6 +64,26 @@ function dataFetch2(){
                 let sub_box = document.createElement("div")
                 sub_box.id = "sub_box"
                 containers.appendChild(sub_box)
+                let layer = document.createElement("div")
+                sub_box.appendChild(layer)
+                layer.id = "layer"
+                
+                //Subject
+                let subject = document.createElement("h4")
+                subject.innerHTML = scheduleData[sub]["subject"]
+                subject.id = "subjects"
+                layer.appendChild(subject)
+
+                //Teacher
+                let teacher = document.createElement("ul")
+                teacher.innerHTML = scheduleData[sub]["Teacher"]
+                teacher.id = "teacher"
+                layer.appendChild(teacher)                
+
+                //Room
+                //Time
+                //Class
+                //Code
             }
         }
     }
@@ -90,6 +110,7 @@ function dataFetch(){
                 let layerA000 = document.createElement("div")
                 cone.appendChild(layerA000)
                 layerA000.id = "layerA000"
+                
                 let subject = document.createElement("h4"); //--> Subject
                 subject.innerHTML = scheduleData[sub]['subject']  
                 subject.id = "subjects"
