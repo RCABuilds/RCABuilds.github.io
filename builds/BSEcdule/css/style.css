@@ -3,14 +3,28 @@
     padding: 0;
 }
 
-#header{/*This is the Header Part*/
+#titlex, #header{/*This is the Header Part*/
     background-color: blue;
     text-align: center;
     color: white;
     font-weight: bolder;
     font-size: 50px;
     padding: 50px;    
+    display: none;
     
+}
+
+#titlex{
+    background-color: transparent;
+    display: block;
+}
+
+#toggler{
+    background-color: black;
+    color: black;
+    width: 100%;
+    /*position: sticky;
+    bottom: 0;*/
 }
 
 #sub_box{
@@ -93,13 +107,7 @@
     margin: 3px;
 }
 
-#footer{
-    background-color: black;
-    color: black;
-    width: 100%;
-    /*position: sticky;
-    bottom: 0;*/
-}
+
 #linggo{
     background-color: transparent;
     width:max-content;
@@ -137,14 +145,14 @@
 }
 
 @media(max-width:1550px){
-    #cone{
+    #sub_box{
         width: 60%;/*800px;*/
 
     }
 }
 
 @media(max-width:1335px){
-    #cone{
+    #sub_box{
         width: 70%;/*800px;*/
 
     }
