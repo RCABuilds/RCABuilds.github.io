@@ -10,8 +10,8 @@
     font-weight: bolder;
     font-size: 50px;
     padding: 50px;    
-    display: none;
-    
+    display: none;    
+
 }
 
 #titlex{
@@ -27,6 +27,12 @@
     bottom: 0;*/
 }
 
+/*
+#tilex, #toggler{
+    position: sticky;
+    top: 0px;
+}
+*/
 #sub_box{
     background-color: black;
     margin: 10px;
@@ -145,6 +151,10 @@
     margin-bottom: 10px;
 }
 
+#floatx{
+    display: none;
+}
+
 @media(max-width:1550px){
     #sub_box{
         width: 60%;/*800px;*/
@@ -169,6 +179,19 @@
 @media(max-width:670px){
     #linggo{
         display: none;
+    }
+    #titlez{
+        display: none;
+    }
+
+    #floatx{
+        display: block;
+        background-color: black;
+    }
+    #wara{
+        display: flex;
+        color: white;
+        flex-direction: column;
     }
 }
 

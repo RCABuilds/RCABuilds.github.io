@@ -30,6 +30,7 @@ function constructor(){
     controlWeek(true)
     toggler()
     functionX()
+    floatx()
 }
 
 class uni_vars{
@@ -54,6 +55,37 @@ function toggler (){
 
     let titlex = document.createElement("div")
     titlex.id = "titlex"
+    titlex.innerHTML = today
+    footer.appendChild(titlex)
+
+
+
+    for(i = 0; i < acc.days.length; i++){
+        let day = document.createElement("button")
+        day.innerHTML = acc.days[i]
+        day.className = "araw"
+        day.id = "Sub" + acc.days[i]
+        if ("Sub" + today == "Sub" + acc.days[i]){
+            day.classList.add("today")
+        }
+        else{
+            day.classList.remove("today")
+        }
+        week.appendChild(day)
+
+    }
+    
+    footer.appendChild(week)    
+}
+function floatx(){
+    let footer = document.getElementById("floatx")    
+    acc = new uni_vars()        
+    let week = document.createElement("ul")
+    week.id = "wara"
+    let today = acc.today()
+
+    let titlex = document.createElement("div")
+    titlex.id = "titlez"
     titlex.innerHTML = today
     footer.appendChild(titlex)
 
