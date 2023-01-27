@@ -30,7 +30,6 @@ function constructor(){
     controlWeek(true)
     toggler()
     functionX()
-    floatx()
 }
 
 class uni_vars{
@@ -59,35 +58,6 @@ function toggler (){
     footer.appendChild(titlex)
 
 
-
-    for(i = 0; i < acc.days.length; i++){
-        let day = document.createElement("button")
-        day.innerHTML = acc.days[i]
-        day.className = "araw"
-        day.id = "Sub" + acc.days[i]
-        if ("Sub" + today == "Sub" + acc.days[i]){
-            day.classList.add("today")
-        }
-        else{
-            day.classList.remove("today")
-        }
-        week.appendChild(day)
-
-    }
-    
-    footer.appendChild(week)    
-}
-function floatx(){
-    let footer = document.getElementById("floatx")    
-    acc = new uni_vars()        
-    let week = document.createElement("ul")
-    week.id = "wara"
-    let today = acc.today()
-
-    let titlex = document.createElement("div")
-    titlex.id = "titlez"
-    titlex.innerHTML = today
-    footer.appendChild(titlex)
 
     for(i = 0; i < acc.days.length; i++){
         let day = document.createElement("button")
@@ -189,7 +159,6 @@ function dataFetch(){
     
 }
 
-
 function controlWeek(ba){
     if (ba == true) {
         weekSort()
@@ -222,21 +191,14 @@ function weekSort(){
 function functionX(){
     acc = new uni_vars()
     for(i = 0; i < acc.Subday.length; i++){
-        //console.log(acc.Subday[i])
         const subs = document.getElementById(acc.Subday[i])
 
         if (subs) {
             subs.addEventListener('click', () =>{
                 for(i = 0; i < acc.days.length; i++){
-                    //console.log(acc.days[i])
-                    //console.log(subs.textContent)
                     let which = subs.textContent
                     let currentDay = acc.days[i]
-                    //let day = document.getElementById(acc.days[i])
-                    //console.log(which + " " + currentDay)
-                    if (which == currentDay) {
-                        //console.log("You clicked " + currentDay)
-                        
+                    if (which == currentDay) {                        
                         document.documentElement.scrollTop = 0;
                         document.getElementById("titlex").textContent = which
                         document.getElementById("Sub" + currentDay).classList.add("today")
@@ -253,7 +215,8 @@ function functionX(){
                         }
                     }
                 }
-            })
+                
+            })            
         }
     }
 }
