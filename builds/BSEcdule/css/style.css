@@ -125,13 +125,13 @@
 }
 
 #img2{
+    display: flex;
     padding: 5px;
     background-color: white;
     border-radius: 10px;
     width: 400px;
-    right: auto;
-    left: auto;
-    
+    margin-left: auto;
+    margin-right:auto;
 }
 
 @media(max-width:1550px){
