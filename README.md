@@ -1,5 +1,4 @@
 # RCABuilds.github.io
 
 Collection of my builds:
-  1. Mathematical Innovation
-  2. and random stuffs...
+  1. I Do not know what I am doing in my life

@@ -125,6 +125,7 @@
     margin: 5px;
     list-style: none;
     cursor: pointer;
+    font-size: 17px;
 
 }
 .today, .araw:hover{
@@ -155,5 +156,37 @@
     #sub_box{
         width: 70%;/*800px;*/
 
+    }
+}
+
+@media(max-width:1000px){
+    #sub_box{
+        width: 80%;/*800px;*/
+
+    }
+}
+
+@media(max-width:750px){
+    #sub_box{
+        width: 90%;/*800px;*/
+
+    }
+}
+
+@media(max-width:590px){
+    #sub_box{
+        width: 95%;/*800px;*/
+
+    }
+}
+
+@media(max-width:465px){
+    #img2{
+        width: 350px;
+    }
+}
+@media(max-width:410px){
+    #img2{
+        width: 300px;
     }
 }
