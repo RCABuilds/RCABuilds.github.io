@@ -105,14 +105,23 @@ function dataFetch2(){
                 time_div.appendChild(timeA)
                 time_div.appendChild(timeB)
 
-
                 //image deck
                 let img2 = document.createElement("img")
                 img2.id = "img2"
                 img2.src = "img/subs/" + scheduleData[sub]['subject'] + ".png"
                 sub_box.appendChild(img2)
-                //Class
-                //Code
+
+                let down_deck = document.createElement("div")
+                down_deck.id = "down_deck"
+                sub_box.appendChild(down_deck)
+                //class
+                let classC = document.createElement("ol")
+                classC.innerHTML = "Class: " + scheduleData[sub]["Class"]
+                down_deck.appendChild(classC)
+                //code
+                let codeC = document.createElement("ol")
+                codeC.innerHTML = "Code: " + scheduleData[sub]["Code"]
+                down_deck.appendChild(codeC)
             }
         }
     }
