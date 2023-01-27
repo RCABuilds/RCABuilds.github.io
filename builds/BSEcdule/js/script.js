@@ -64,31 +64,53 @@ function dataFetch2(){
                 let sub_box = document.createElement("div")
                 sub_box.id = "sub_box"
                 containers.appendChild(sub_box)
-                let layer = document.createElement("div")
-                sub_box.appendChild(layer)
-                layer.id = "layer"
-
-
+                
+                let layerA = document.createElement("div")
+                sub_box.appendChild(layerA)
+                layerA.id = "layerA"
                 //image deck
                 let imgx = document.createElement("img")
                 imgx.id = "imgx"
                 imgx.src = "img/subs/" + scheduleData[sub]['subject'] + ".png"
-                layer.appendChild(imgx)
-                
+                layerA.appendChild(imgx)            
                 //Subject
                 let subject = document.createElement("h4")
                 subject.innerHTML = scheduleData[sub]["subject"]
                 subject.id = "subjects"
-                layer.appendChild(subject)
-
+                layerA.appendChild(subject)
                 //Teacher
                 let teacher = document.createElement("ul")
                 teacher.innerHTML = scheduleData[sub]["Teacher"]
                 teacher.id = "teacher"
-                layer.appendChild(teacher)                
+                layerA.appendChild(teacher)                
 
+                let layerB = document.createElement("div")
+                layerB.id = "layerB"
+                sub_box.appendChild(layerB)
                 //Room
+                let room = document.createElement("ul")           
+                room.innerHTML = "Room: " +  scheduleData[sub]["Room"]
+                room.id = "room"
+                layerB.appendChild(room)                
                 //Time
+                let time_div = document.createElement("div")
+                time_div.id = "time"
+                layerB.appendChild(time_div)
+                let timeA = document.createElement("ol")
+                timeA.innerHTML = scheduleData[sub]["Time"][0]
+                timeA.id = "time_start"
+                let timeB = document.createElement("ol")
+                timeB.innerHTML = scheduleData[sub]["Time"][1]
+                timeB.id = "time_end"
+                time_div.appendChild(timeA)
+                time_div.appendChild(timeB)
+
+
+                //image deck
+                let img2 = document.createElement("img")
+                img2.id = "img2"
+                img2.src = "img/subs/" + scheduleData[sub]['subject'] + ".png"
+                sub_box.appendChild(img2)
                 //Class
                 //Code
             }
@@ -130,7 +152,7 @@ function dataFetch(){
                 teacher.id = "teacher"
                 layerA000.appendChild(teacher)
                 
-                let ww = document.createElement("dir")//--> where and when?
+                let ww = document.createElement("div")//--> where and when?
                 ww.id = "ww"
                 cone.appendChild(ww)
                 //room                
@@ -210,7 +232,7 @@ function footer (){
     week.id = "linggo"
     let today = acc.today()
     for(i = 0; i < acc.days.length; i++){
-        let day = document.createElement("li")
+        let day = document.createElement("button")
         day.innerHTML = acc.days[i]
         day.className = "araw"
         day.id = "Sub" + acc.days[i]

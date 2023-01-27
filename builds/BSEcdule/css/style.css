@@ -23,7 +23,7 @@
     margin-right: auto;
 }
 
-#layer{
+#layerA{
     display: flex;
     flex-direction: row;
 }
@@ -50,7 +50,7 @@
     border-radius: 5px;
 }
 
-#ww{
+#layerB{
     display: flex;
     flex-direction: row;    
 }
@@ -122,6 +122,16 @@
 .today, .araw:hover{
     background-color: white;
     color: black;
+}
+
+#img2{
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    width: 400px;
+    right: auto;
+    left: auto;
+    
 }
 
 @media(max-width:1550px){
