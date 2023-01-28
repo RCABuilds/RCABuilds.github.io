@@ -26,9 +26,9 @@ function displaySchedule(){
 
 
 function constructor(){
-    dataFetch()
+    dataFetch3()
     controlWeek(true)
-    toggler()
+    functionToggle()
     functionX()
 }
 
@@ -45,67 +45,75 @@ class uni_vars{
     
 }
 
-function toggler (){
-    let footer = document.getElementById("toggler")    
-    acc = new uni_vars()        
-    let week = document.createElement("ul")
-    week.id = "linggo"
-    let today = acc.today()
-
-    let titlex = document.createElement("div")
-    titlex.id = "titlex"
-    titlex.innerHTML = today
-    footer.appendChild(titlex)
-
-    //#touch .container
-    let touch = document.createElement("div")
-    touch.id = "touch"; touch.className = "container"
-    touch.addEventListener("click", myFunction)
-    titlex.appendChild(touch)
-    
-    //.bar1
-    let bar1 = document.createElement("div")
-    bar1.className = "bar1"
-    //.bar2
-    let bar2 = document.createElement("div")
-    bar2.className = "bar2"
-    //.bar3
-    let bar3 = document.createElement("div")
-    bar3.className = "bar3"
-
-    touch.appendChild(bar1);touch.appendChild(bar2);touch.appendChild(bar3)
-
-    for(i = 0; i < acc.days.length; i++){
-        let day = document.createElement("button")
-        day.innerHTML = acc.days[i]
-        day.className = "araw"
-        day.id = "Sub" + acc.days[i]
-        if ("Sub" + today == "Sub" + acc.days[i]){
-            day.classList.add("today")
-        }
-        else{
-            day.classList.remove("today")
-        }
-        week.appendChild(day)
-
-    }
-    
-    footer.appendChild(week)    
-}
-
-function dataFetch(){
+function dataFetch3(){
     let acc = new uni_vars()
     let main_section = document.getElementById("main_section")
     let scheduleData = data[document.title]; console.log(document.title)
     for(i = 0; i < acc.days.length; i++){
         let containers = document.createElement("ol")                
         let header = document.createElement("div")
-        header.innerHTML = acc.days[i]
         containers.id = acc.days[i]
         header.id = "header"
+
+        let layerA000 = document.createElement("div")
+        layerA000.id = "layerA000"
+        header.appendChild(layerA000)
+
+        let dato = document.createElement("h4")
+        dato.innerHTML = acc.days[i]
+        dato.id  = "dato" + acc.days[i]
+        layerA000.appendChild(dato)
+
         containers.appendChild(header)
         main_section.appendChild(containers)
-        
+
+        let touches = document.createElement("div")
+        touches.id = "touch" + acc.days[i]
+        layerA000.appendChild(touches)
+
+        //.bar1
+        let bar1 = document.createElement("div")
+        bar1.className = "bar1"
+        //.bar2
+        let bar2 = document.createElement("div")
+        bar2.className = "bar2"
+        //.bar3
+        let bar3 = document.createElement("div")
+        bar3.className = "bar3"
+
+        document.getElementById("touch" + acc.days[i]).appendChild(bar1)
+        document.getElementById("touch" + acc.days[i]).appendChild(bar2)
+        document.getElementById("touch" + acc.days[i]).appendChild(bar3)
+
+        let toggler = document.createElement("toggler")
+        let week = document.createElement("ul")
+        week.id = acc.days[i] + "linggo"
+        let today = acc.today()
+
+        let layerA001 = document.createElement("layerA001")
+        layerA001.id = "layerA001"
+
+        header.appendChild(layerA001)
+        layerA001.appendChild(toggler)
+        toggler.appendChild(week)
+        lock = acc.days[i]
+        for(j = 0; j < acc.days.length; j++){
+            let day = document.createElement("button")
+
+
+            day.innerHTML = acc.days[j]
+            day.className = "araw"
+            day.id = lock +  "Sub" + acc.days[j]
+            if ("Sub" + acc.days[i] == "Sub" + acc.days[j]){
+                day.classList.add("today")
+            }
+            else{
+                day.classList.remove("today")
+            }
+            week.appendChild(day)
+        }
+        toggler.appendChild(week)
+
         for(let sub in scheduleData){
             if(scheduleData[sub]['Day'].includes(acc.days[i])){
                 let sub_box = document.createElement("div")
@@ -171,8 +179,52 @@ function dataFetch(){
                 down_deck.appendChild(codeC)
             }
         }
+
+        
+    }
+}
+
+function functionToggle(){
+    let acc = new uni_vars()
+    for(i = 0; i < acc.days.length; i++){
+        const partition = document.getElementById("touch" + acc.days[i])
+        if (partition) {
+            partition.addEventListener('click', () => {
+                partition.classList.toggle("change")
+                for(b = 0; b < acc.days.length; b++){
+                    //console.log(acc.days[b])
+                    const nav = document.getElementById(acc.days[b] + "linggo");
+                    if (nav.style.right === "0px") {
+                        nav.style.right = "-1000px";
+                        
+                      } else {
+                        nav.style.right = "0px";                        
+                      }                                                                  
+                }
+
+            })
+        }
+    }
+
+}
+
+function flow(){
+
+    const nav = document.getElementById("Saturdaylinggo");
+    let zipper = true
+
+    if (zipper == true) {        
+        nav.style.right = "0px"
+        zipper = false;
+        console.log("got it")
+    }
+    else if(zipper == false){
+        console.log("no?")
+        nav.style.right = "-1000px"
+        zipper = true;
     }
     
+    //nav.classList.toggle("hello")
 }
 
 function controlWeek(ba){
@@ -206,64 +258,32 @@ function weekSort(){
 
 function functionX(){
     acc = new uni_vars()
-    for(i = 0; i < acc.Subday.length; i++){
-        const subs = document.getElementById(acc.Subday[i])
-
-        if (subs) {
-            subs.addEventListener('click', () =>{
-                for(i = 0; i < acc.days.length; i++){
-                    let which = subs.textContent
-                    let currentDay = acc.days[i]
-                    if (which == currentDay) {                        
+    for (let i = 0; i < acc.days.length; i++) {
+        //console.log(i)
+        for (let j = 0; j < acc.days.length; j++) {
+            //console.log(acc.days[i] + "Sub" + acc.days[j])
+            let switcher = document.getElementById(acc.days[i] + "Sub" + acc.days[j])
+            if (switcher) {
+                switcher.addEventListener('click', () =>{
+                    let almond = acc.days[j]
+                    //console.log(almond)
+                    
+                    for(let m = 0; m < acc.days.length; m++){
+                        //console.log(acc.days[m])
+                        let nut = acc.days[m]
                         document.documentElement.scrollTop = 0;
-                        document.getElementById("titlex").textContent = which
-                        document.getElementById("Sub" + currentDay).classList.add("today")
-                        document.getElementById(currentDay).style.display = ""
-                    }
-                    else if(which != currentDay){
-                        try {
-                            document.documentElement.scrollTop = 0;
-                            document.getElementById("titlex").textContent = which
-                            document.getElementById("Sub" + currentDay).classList.remove("today")
-                            document.getElementById(currentDay).style.display = "none"
-                        } catch (Uncaught) {
-
+                        if (almond == nut) {
+                            //console.log(nut + "-->")
+                            document.getElementById(nut).style.display = ""
+                        }
+                        else if (almond != acc.days[m]) {
+                            //console.log(nut)
+                            document.getElementById(nut).style.display = "none"
                         }
                     }
-                }
-                
-            })            
+                })
+            }
         }
     }
-}
 
-const touch = document.getElementById("touch")
-const nav = document.getElementById("linggo")
-ziggy = 0
-
-function myFunction(x) {
-    //touch.classList.toggle("change");
-    //alert("glat it work")
-    document.getElementById("touch").classList.toggle("change")
-    if (ziggy == 0) {
-        document.getElementById("linggo").classList.add("active")      
-        ziggy = 1
-    }
-    else if(ziggy == 1){
-        document.getElementById("linggo").classList.remove("active")      
-        ziggy = 0
-    }
-  }
-  if (touch) {
-    touch.addEventListener('click', () =>{
-        //console.log(nav)
-        if (ziggy == 0) {
-            document.getElementById("linggo").classList.add("active")      
-            ziggy = 1
-        }
-        else if(ziggy == 1){
-            document.getElementById("linggo").classList.remove("active")      
-            ziggy = 0
-        }
-    })
 }
