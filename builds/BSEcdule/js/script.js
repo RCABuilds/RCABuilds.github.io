@@ -57,7 +57,23 @@ function toggler (){
     titlex.innerHTML = today
     footer.appendChild(titlex)
 
+    //#touch .container
+    let touch = document.createElement("div")
+    touch.id = "touch"; touch.className = "container"
+    touch.addEventListener("click", myFunction)
+    titlex.appendChild(touch)
+    
+    //.bar1
+    let bar1 = document.createElement("div")
+    bar1.className = "bar1"
+    //.bar2
+    let bar2 = document.createElement("div")
+    bar2.className = "bar2"
+    //.bar3
+    let bar3 = document.createElement("div")
+    bar3.className = "bar3"
 
+    touch.appendChild(bar1);touch.appendChild(bar2);touch.appendChild(bar3)
 
     for(i = 0; i < acc.days.length; i++){
         let day = document.createElement("button")
@@ -226,7 +242,17 @@ const nav = document.getElementById("linggo")
 ziggy = 0
 
 function myFunction(x) {
-    x.classList.toggle("change");
+    //touch.classList.toggle("change");
+    //alert("glat it work")
+    document.getElementById("touch").classList.toggle("change")
+    if (ziggy == 0) {
+        document.getElementById("linggo").classList.add("active")      
+        ziggy = 1
+    }
+    else if(ziggy == 1){
+        document.getElementById("linggo").classList.remove("active")      
+        ziggy = 0
+    }
   }
   if (touch) {
     touch.addEventListener('click', () =>{

@@ -224,11 +224,15 @@
         display: flex;
         transition: 0.3s ease;
     }
-    #touch{
-        position: absolute;
-        margin-left: 90%;
-        margin-top: 10%;
+    #titlex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         
+    }
+    #touch{
+        margin-top: auto;
+        margin-bottom: auto;
     }
 }
 
