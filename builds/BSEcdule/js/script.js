@@ -188,9 +188,13 @@ function functionToggle(){
     let acc = new uni_vars()
     for(i = 0; i < acc.days.length; i++){
         const partition = document.getElementById("touch" + acc.days[i])
+
+        
+
         if (partition) {
             partition.addEventListener('click', () => {
                 partition.classList.toggle("change")
+                
                 for(b = 0; b < acc.days.length; b++){
                     //console.log(acc.days[b])
                     const nav = document.getElementById(acc.days[b] + "linggo");
@@ -208,24 +212,6 @@ function functionToggle(){
 
 }
 
-function flow(){
-
-    const nav = document.getElementById("Saturdaylinggo");
-    let zipper = true
-
-    if (zipper == true) {        
-        nav.style.right = "0px"
-        zipper = false;
-        console.log("got it")
-    }
-    else if(zipper == false){
-        console.log("no?")
-        nav.style.right = "-1000px"
-        zipper = true;
-    }
-    
-    //nav.classList.toggle("hello")
-}
 
 function controlWeek(ba){
     if (ba == true) {
@@ -265,6 +251,25 @@ function functionX(){
             let switcher = document.getElementById(acc.days[i] + "Sub" + acc.days[j])
             if (switcher) {
                 switcher.addEventListener('click', () =>{
+
+                    //console.log(acc.days[i])
+                    let prev_notch = document.getElementById("touch" + acc.days[i])
+                    prev_notch.classList.toggle("change")
+                    for(x = 0; x < acc.days.length; x++){
+                        const partition = document.getElementById("touch" + acc.days[x])
+                        for(b = 0; b < acc.days.length; b++){
+                            //console.log(acc.days[b])
+                            const nav = document.getElementById(acc.days[b] + "linggo");
+                            if (nav.style.right === "0px") {
+                                nav.style.right = "-1000px";
+                                
+                              } else {
+                                nav.style.right = "0px";                        
+                              }                                                                  
+                        }
+                    }
+
+
                     let almond = acc.days[j]
                     //console.log(almond)
                     
