@@ -20,7 +20,7 @@
         },
         "Sub3":{
             "subject":"Science, Technology and Society",
-            "Teacher":"Ms. Talingdan E.",
+            "Teacher":"Ms. Jamila Elaine Tolentino",
             "Time":["08:00 am", "09:00 am"],
             "Day":["Monday", "Tuesday", "Wednesday"],
             "Room":"HAB 104",
@@ -29,7 +29,7 @@
         },
         "Sub4":{
             "subject":"Discrete Mathematics",
-            "Teacher":"New Instructor",
+            "Teacher":"Ms. Jamila Elaine Tolentino",
             "Time":["10:00 am", "11:00 am"],
             "Day":["Monday", "Tuesday", "Wednesday"],
             "Room":"CL1",
@@ -39,7 +39,7 @@
         },
         "Sub5":{
             "subject":"National Service Training Program 2",
-            "Teacher":"Mr. Agustin, N.",
+            "Teacher":"Mr. Omingle Baliwang Jose",
             "Time":["10:00 am", "01:00 pm"],
             "Day":["Saturday"],
             "Room":"AVR",
