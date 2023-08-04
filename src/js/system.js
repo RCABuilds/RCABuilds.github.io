@@ -1,4 +1,4 @@
-import { fav_icon, make, print } from './rca.mjs';
+import { fav_icon, img, make, print } from './rca.mjs';
 
 //make("h1").from("nodeId").to("body").content("Hello, World!").build();
 
@@ -21,13 +21,10 @@ function body(){
 function heading(){
     var mess = "I'm a tech enthusiast, 2D animator (Krita), and game developer (Godot 4). As a web developer, I work with Vanilla JS, HTML, and CSS. I also explore Android dev (Java/Python). My goal is to create impactful solutions for users. Grateful for the chance to contribute to tech."
     make("div").from("heading").to("body").content("").build()
-
     make("div").from("message_dock").to("#heading").build()
-
     make("div").from("welcome_dock").to("#message_dock").build()
-    make("h1").from("welcome").to("#welcome_dock").content("Hello").build()
-    make("h1").from("welcome_").to("#welcome_dock").content("There!").build()
-
+    make("h1").from("welcome").to("#welcome_dock").content("Hello There!").build()
+    make("h1").from("welcome_").to("#welcome_dock").content(" ...ReCruAs Here!").build()
     make("div").from("mess_container").to("#message_dock").build()
     make("p").from("message").to("#mess_container").content(mess).build()
 }

@@ -49,13 +49,8 @@ export function img(imageSrc) {
 
   return {
     from: function (imageId) {
-      const imageNode = document.getElementById(imageId);
-      if (imageNode) {
-        imageElement = imageNode.cloneNode(true);
-        return this;
-      } else {
-        throw new Error("Image with the specified ID not found.");
-      }
+      imageElement.id = imageId;
+      return this;
     },
     to: function (parentSelector) {
       let parentElement = document.querySelector(parentSelector);

@@ -32,6 +32,11 @@
     width: fit-content;
 }
 
+#welcome_{
+    font-style: italic;
+    font-weight: lighter;
+}
+
 #mess_container{
     display: flex;
     height: fit-content;
