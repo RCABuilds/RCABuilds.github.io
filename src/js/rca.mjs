@@ -42,3 +42,31 @@ export function make(elementType) {
     },
   };
 }
+
+export function img(imageSrc) {
+  let imageElement = document.createElement('img');
+  imageElement.src = imageSrc;
+
+  return {
+    from: function (imageId) {
+      const imageNode = document.getElementById(imageId);
+      if (imageNode) {
+        imageElement = imageNode.cloneNode(true);
+        return this;
+      } else {
+        throw new Error("Image with the specified ID not found.");
+      }
+    },
+    to: function (parentSelector) {
+      let parentElement = document.querySelector(parentSelector);
+      if (!parentElement) {
+        throw new Error("Parent element not found.");
+      }
+      parentElement.appendChild(imageElement);
+      return this;
+    },
+    build: function () {
+      return imageElement;
+    },
+  };
+}
