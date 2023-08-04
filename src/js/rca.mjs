@@ -1,4 +1,4 @@
-function print(what){
+export function print(what){
     console.log(what)
 }
 
