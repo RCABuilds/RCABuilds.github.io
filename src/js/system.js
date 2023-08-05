@@ -40,6 +40,8 @@ function content(){
         make("li").from("which_" + category[i]).to("#categories").content(category[i]).build()
         document.getElementById("which_" + category[i]).className = "category_butts"
     }
+
+    
 }
 
 function foot(){
