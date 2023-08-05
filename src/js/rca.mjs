@@ -65,3 +65,25 @@ export function img(imageSrc) {
     },
   };
 }
+
+export function id(selector) {
+  const element = document.querySelector(selector);
+
+  return {
+    addClass: function(className) {
+      if (element && !element.classList.contains(className)) {
+        element.classList.add(className);
+      }
+      return this;
+    },
+    removeClass: function(className) {
+      if (element && element.classList.contains(className)) {
+        element.classList.remove(className);
+      }
+      return this;
+    },
+    getElement: function() {
+      return element;
+    }
+  };
+}

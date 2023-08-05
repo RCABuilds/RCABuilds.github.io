@@ -1,4 +1,4 @@
-import { fav_icon, img, make, print } from './rca.mjs';
+import { fav_icon, img, make, print, id} from './rca.mjs';
 
 //make("h1").from("nodeId").to("body").content("Hello, World!").build();
 
@@ -32,6 +32,14 @@ function heading(){
 
 function content(){
     make("div").from("sandwich_top").to("body").build()
+    make("ul").from("categories").to("#sandwich_top").build()
+    var category = [
+        "All", "Animation", "Game Dev", "Website", "Edit"
+    ]
+    for (let i = 0; i < category.length; i++){
+        make("li").from("which_" + category[i]).to("#categories").content(category[i]).build()
+        document.getElementById("which_" + category[i]).className = "category_butts"
+    }
 }
 
 function foot(){
