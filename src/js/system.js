@@ -16,6 +16,7 @@ function configuration(){
 function body(){
     //make("h1").from("").to("body").content("This website is still under development, and the developer is also lazy, and also it is still under renovations").build()
     heading()
+    content()
 }
 
 function heading(){
@@ -24,9 +25,13 @@ function heading(){
     make("div").from("message_dock").to("#heading").build()
     make("div").from("welcome_dock").to("#message_dock").build()
     make("h1").from("welcome").to("#welcome_dock").content("Hello There!").build()
-    make("h1").from("welcome_").to("#welcome_dock").content(" ...ReCruAs Here!").build()
+    make("h1").from("welcome_").to("#welcome_dock").content("~ReCruAs Here!").build()
     make("div").from("mess_container").to("#message_dock").build()
     make("p").from("message").to("#mess_container").content(mess).build()
+}
+
+function content(){
+    make("div").from("sandwich_top").to("body").build()
 }
 
 function foot(){
@@ -35,7 +40,3 @@ function foot(){
         "Facebook", "YouTube", "TikTok", "Instagram", "Threads", "Twitter"
     ]
 }
-
-/**
- * I am a dedicated individual with a passion for technology. As a hobbyist, I find joy in exploring various creative pursuits. As a 2D animator, I enjoy bringing visuals to life using Krita, striving to create captivating animations. In game development, I find pleasure in utilizing Godot 4 to craft engaging gaming experiences. As a web developer, I am constantly learning and improving my skills in Vanilla JavaScript, HTML, CSS, and more, with the goal of creating user-friendly websites. My knowledge extends to Android development with Android Studio and Java, where I work on building meaningful mobile applications. I also have experience coding in Python, Java, HTML, CSS, and JavaScript, allowing me to tackle various projects and challenges with humility. I aim to deliver creative and functional solutions that can positively impact users and audiences. I am grateful for the opportunity to contribute to the world of technology in my own small way.
- */
