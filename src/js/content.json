@@ -1,0 +1,20 @@
+[
+    {
+        "title":"BODH",
+        "path":"/builds/bodh/bodh.htm",
+        "thumbnail":"",
+        "tags":["Website"]
+    },
+    {
+        "title":"Vader",
+        "path":"builds/vader/vader.htm",
+        "thumbnail":"",
+        "tags":["Website"]
+    },
+    {
+        "title":"Yes_or_No",
+        "path":"builds/yesno/yesno.htm",
+        "thumbnail":"",
+        "tags":["Website", "Game"]
+    }
+]

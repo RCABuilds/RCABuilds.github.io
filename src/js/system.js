@@ -1,4 +1,4 @@
-import { fav_icon, img, make, print, id} from './rca.mjs';
+import { fav_icon, img, make, print, id, readJSONFile, openLink} from './rca.mjs';
 
 //make("h1").from("nodeId").to("body").content("Hello, World!").build();
 
@@ -41,7 +41,51 @@ function content(){
         document.getElementById("which_" + category[i]).className = "category_butts"
     }
 
-    
+    make("div").from("content_container").to("body").build()
+
+    const fileUrl = "src/js/content.json";
+    readJSONFile(fileUrl)
+    .then((jsonData) => {
+        if (jsonData) {
+            // Handle the parsed JSON data here
+            //console.log(jsonData);
+            
+            //openLink(jsonData[0].path)
+            //print(jsonData.length)
+            for(let i = 0; i < jsonData.length; i++){
+                make("div").from("data_" + jsonData[i].title).to("#content_container").build()
+                document.getElementById("data_" + jsonData[i].title).className = "content_box"
+                img(jsonData[i].thumbnail).from("data_img_" + jsonData[i].title).to("#data_" + jsonData[i].title)
+                document.getElementById("data_img_" + jsonData[i].title).className = "content_img"
+                
+                make("ul").from("list_cate_" + jsonData[i].title).to("#data_" + jsonData[i].title).build()
+                document.getElementById("list_cate_" + jsonData[i].title).className = "categ"
+                
+                for(let j = 0; j < jsonData[i].tags.length; j++){
+                    //print(jsonData[i].tags[j])
+                    make("li").from("list_" + jsonData[i].tags[j] + "_" + jsonData[i].title).to("#list_cate_" + jsonData[i].title).content(jsonData[i].tags[j]).build()
+                    document.getElementById("list_" + jsonData[i].tags[j] + "_" + jsonData[i].title).className = "list_cate"
+                }
+
+                make("h3").from("title").to("#data_" + jsonData[i].title).content(jsonData[i].title).build()
+                let value_title = document.getElementById("data_" + jsonData[i].title)
+                if(value_title){
+                    value_title.addEventListener('click', () => {
+                        print(value_title)    
+                        openLink(jsonData[i].path)                    
+                    })
+                }
+            }
+        }
+    })
+    .catch((error) => {
+        // Handle any errors that occurred during file reading
+        console.error("Error:", error);
+    });
+
+
+
+
 }
 
 function foot(){

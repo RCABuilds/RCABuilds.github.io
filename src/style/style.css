@@ -86,3 +86,44 @@
     background-color: #000000;
     color: white;
 }
+
+#content_container{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    width: 100%;
+}
+
+.content_box{
+    background-color: rgb(10, 39, 119);
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 250px;
+    margin: 3px;
+    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.content_img{
+    background-color: red;
+    height: 200px;
+    width: 235px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.categ{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.list_cate{
+    background-color: green;
+    margin: 5px;
+    padding: 3px;
+    margin-top: -10px;
+}

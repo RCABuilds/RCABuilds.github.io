@@ -87,3 +87,20 @@ export function id(selector) {
     }
   };
 }
+
+export async function readJSONFile(fileUrl) {
+  try {
+    const response = await fetch(fileUrl);
+    if (!response.ok) {
+      throw new Error(`Error reading JSON file. Status: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Error reading JSON file:", error);
+    return null;
+  }
+}
+
+export function openLink(url) {
+  window.open(url, "_blank");
+}
