@@ -1,7 +1,5 @@
 import { fav_icon, img, make, print, id, readJSONFile, openLink} from './rca.mjs';
 
-//make("h1").from("nodeId").to("body").content("Hello, World!").build();
-
 function constructor(){
     configuration()
     body()
@@ -15,9 +13,22 @@ function configuration(){
 
 function body(){
     //make("h1").from("").to("body").content("This website is still under development, and the developer is also lazy, and also it is still under renovations").build()
-    heading()
-    content()
+    //heading()
+    //content()
+    greetings()
 }
+
+
+function greetings(){
+    make("section").from("banner").to("body").build()
+        img("assets/ice_cream.jpg").from("nano").to("#banner").build()
+}
+
+
+function easter_cli(){
+    console.log("Hello There!")
+}
+
 
 function heading(){
     var mess = "I'm a tech enthusiast, 2D animator (Krita), and game developer (Godot 4). As a web developer, I work with Vanilla JS, HTML, and CSS. I also explore Android dev (Java/Python). My goal is to create impactful solutions for users. Grateful for the chance to contribute to tech."
@@ -47,11 +58,6 @@ function content(){
     readJSONFile(fileUrl)
     .then((jsonData) => {
         if (jsonData) {
-            // Handle the parsed JSON data here
-            //console.log(jsonData);
-            
-            //openLink(jsonData[0].path)
-            //print(jsonData.length)
             for(let i = 0; i < jsonData.length; i++){
                 make("div").from("data_" + jsonData[i].title).to("#content_container").build()
                 document.getElementById("data_" + jsonData[i].title).className = "content_box"
@@ -70,8 +76,8 @@ function content(){
                 make("h3").from("title").to("#data_" + jsonData[i].title).content(jsonData[i].title).build()
                 let value_title = document.getElementById("data_" + jsonData[i].title)
                 if(value_title){
-                    value_title.addEventListener('click', () => {
-                        print(value_title)    
+                    value_title.addEventListener('dblclick', () => {
+                        //print(value_title)    
                         openLink(jsonData[i].path)                    
                     })
                 }
