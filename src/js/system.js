@@ -20,9 +20,9 @@ function body(){
 
 
 function greetings(){
-    make("section").from("banner").to("body").build()
-        img("assets/ice_cream.jpg").from("nano").to("#banner").build()
-}
+    make("div").from("banner").to("body").build()
+        img("assets/ice_cream.jpg").from("nano").to("#banner").build()}
+        make("h1").from("hello").to("#banner").content("Hello There!").build();
 
 
 function easter_cli(){

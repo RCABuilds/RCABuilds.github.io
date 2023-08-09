@@ -129,14 +129,27 @@
 }
 */
 
+body{
+    background-color: rgb(161, 161, 161);
+}
 
 #banner{
+    position: relative;
     background-color: black;
     height: 500px;
 }
 
 #nano{
     object-fit: cover;
+    filter: brightness(10%);
     height: 100%;
     width: 100%;
+}
+
+#hello{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
