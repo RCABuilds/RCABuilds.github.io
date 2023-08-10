@@ -21,13 +21,11 @@ function body(){
 
 function greetings(){
     make("div").from("banner").to("body").build()
-        img("assets/ice_cream.jpg").from("nano").to("#banner").build()}
-        make("h1").from("hello").to("#banner").content("Hello There!").build();
-
-
-function easter_cli(){
-    console.log("Hello There!")
+        img("assets/ice_cream.jpg").from("nano").to("#banner").build()
+        make("h1").from("hello").to("#banner").content("Welcome to ReCruAs").build();
 }
+
+
 
 
 function heading(){

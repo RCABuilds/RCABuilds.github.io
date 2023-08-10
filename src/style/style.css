@@ -144,6 +144,7 @@ body{
     filter: brightness(10%);
     height: 100%;
     width: 100%;
+    user-select: none;
 }
 
 #hello{
@@ -152,4 +153,5 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    user-select: none;
 }
