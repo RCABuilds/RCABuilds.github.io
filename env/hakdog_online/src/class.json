@@ -1,0 +1,14 @@
+[
+    {
+        "Subject":"",
+        "Teacher":"",
+        "Code":"",
+        "Time":[],
+        "Connect":{
+            "Messenger":"",
+            "Google Class":"",
+            "Google Chat":""
+        },
+        "Notes":""
+    }
+]
