@@ -1,6 +1,4 @@
 import { fav_icon, img, make, print, id, readJSONFile, openLink} from 'https://rcabuilds.github.io/src/js/rca.mjs';
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
 
 
 
@@ -23,10 +21,11 @@ function gate_keep(){
     make("h1").from("gate_keep_mess").to("#google_login").content("Welcome to Hakdog").build()
     
     make("div").from("container_A000").to("#google_login").build()
-        make()
-
+        img("./assets/google.webp").from("google_icon").to("#container_A000").build()
+        make("h2").from("login?").to("#container_A000").content("Login with Google.").build()
     
 }
+
 
 function body(){
 
