@@ -11,7 +11,7 @@ constructor()
 
 
 function header(){
-    fav_icon("./../env/hakdog_online/assets/hotdog.webp");
+    fav_icon("./hakdog_online/assets/hotdog.png");
 }
 
 function body(){
