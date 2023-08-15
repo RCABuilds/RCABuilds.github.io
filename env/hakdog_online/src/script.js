@@ -18,11 +18,12 @@ function header(){
 function gate_keep(){
     // Google Firebase
     make("section").from("google_login").to("body").build()
-    make("h1").from("gate_keep_mess").to("#google_login").content("Welcome to Hakdog").build()
+    make("div").from("centerfied").to("#google_login").build()
+    make("h1").from("gate_keep_mess").to("#centerfied").content("Welcome to Hakdog").build()
     
-    make("div").from("container_A000").to("#google_login").build()
+    make("div").from("container_A000").to("#centerfied").build()
         img("./assets/google.webp").from("google_icon").to("#container_A000").build()
-        make("h2").from("login?").to("#container_A000").content("Login with Google.").build()
+        make("h2").from("login_butts").to("#container_A000").content("Login with Google").build()
     
 }
 
