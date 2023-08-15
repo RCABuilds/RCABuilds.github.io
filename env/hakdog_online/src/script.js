@@ -5,16 +5,22 @@ import { fav_icon, img, make, print, id, readJSONFile, openLink} from 'https://r
 
 function constructor(){
     header()
-    body()
+    gate_keep()
 }
 constructor()
 
 
 function header(){
-    fav_icon("./hakdog_online/assets/hotdog.png");
+    fav_icon("./assets/hotdog.png");
+    document.title = "Hakdog"
+}
+
+function gate_keep(){
+    
 }
 
 function body(){
+
     // All
 
     // Sunday

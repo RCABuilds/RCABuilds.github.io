@@ -5,7 +5,6 @@ export function print(what){
 }
 
 export function fav_icon(src){
-  print("the author is debingging the fav icon feature")
   const linkElement = document.querySelector('link[rel="shortcut icon"]');
 
   if (linkElement) {
