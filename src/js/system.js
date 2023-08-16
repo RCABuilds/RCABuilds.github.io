@@ -16,7 +16,7 @@ function body(){
     //heading()
     //content()
     header()
-    //greetings()
+    greetings()
 }
 
 function header(){
