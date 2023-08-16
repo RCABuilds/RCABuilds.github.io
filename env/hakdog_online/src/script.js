@@ -25,8 +25,17 @@ function gate_keep(){
         img("./assets/google.webp").from("google_icon").to("#container_A000").build()
         make("h2").from("login_butts").to("#container_A000").content("Login with Google").build()
     
+    const container_A000 = document.getElementById("container_A000");
+    if (container_A000) {
+        container_A000.addEventListener('click', ()=>{
+            google()
+        })
+    }
 }
 
+function google(){
+    print("hello world")
+}
 
 function body(){
 

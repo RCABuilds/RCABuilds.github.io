@@ -15,7 +15,27 @@ function body(){
     //make("h1").from("").to("body").content("This website is still under development, and the developer is also lazy, and also it is still under renovations").build()
     //heading()
     //content()
-    greetings()
+    header()
+    //greetings()
+}
+
+function header(){
+    make("section").from("header").to("body").build()
+
+    // Home
+        //-> Collection of News
+
+    let selection = ["Software", "Games"]
+    // Apps
+    // Games
+    for(let i = 0; i < selection.length; i++){
+        let value = (selection[i]).toString().toUpperCase()
+        make("div").from(value).to("#header").content(selection[i]).build()
+        id(value).addClass("selection")
+    }
+
+    // Account
+    make("div").from("ACCOUNT").to("#header").content("Account | Login").build()
 }
 
 

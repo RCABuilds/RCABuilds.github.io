@@ -69,7 +69,7 @@ export function img(imageSrc) {
 }
 
 export function id(selector) {
-  const element = document.querySelector(selector);
+  const element = document.getElementById(selector);
 
   return {
     addClass: function(className) {

@@ -133,6 +133,51 @@ body{
     background-color: rgb(161, 161, 161);
 }
 
+#header{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    height: 65px;
+    padding: 0;
+    margin: 0;
+}
+
+.selection{
+    color: white;
+    /*margin: 10px;*/
+    background-color: blue;
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+
+}
+
+#ACCOUNT{
+    background-color: white;
+    /*margin: 10px;
+    border-radius: 30px;*/
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+
+    user-select: none;
+}
+
+#ACCOUNT:hover{
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+}
+
+
 #banner{
     position: relative;
     background-color: black;
@@ -145,6 +190,7 @@ body{
     height: 100%;
     width: 100%;
     user-select: none;
+    -webkit-user-drag: none;
 }
 
 #hello{
