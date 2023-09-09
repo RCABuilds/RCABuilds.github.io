@@ -16,6 +16,7 @@ function config(){
 }
 function header(){
     make('section').from('header').to('body').content('').build()
+    make
 
     //make('div').from('Status').to('#header').content('Status').build()
     make('div').from('NP').to('#header').content('Not Paid').build()
@@ -23,6 +24,7 @@ function header(){
     make('div').from('All').to('#header').content('All').build()
 
     id('All').addClass('head')
+    document.getElementById('All').classList.toggle('active')
     id('Paid').addClass('head')
     id('NP').addClass('head')
     id('Status').addClass('head')
@@ -75,14 +77,16 @@ function Paid(){
     fetch('stud.json')
     .then(response => response.json())
     .then(data => {
+        let a = 0;
         for(let j = 0; j < data.length; j++){
             
             
             if(data[j].Status == 'Paid'){
+                a++;
                 make('div').from('studr_' + j).to('#stud_paid_list').content('').build()
                 id('studr_' + j).addClass('stud_box')
                 
-                make('div').from('stud_Name_' + j).to('#studr_' + j).content(j + 1 + ": " + data[j].Student_Name).build()
+                make('div').from('stud_Name_' + j).to('#studr_' + j).content(a + ": " + data[j].Student_Name).build()
                 id('stud_Name_' + j).addClass('SName')
 
                 make('div').from('containers' + j).to('#studr_' + j).content('').build()
@@ -106,14 +110,16 @@ function NP(){
     fetch('stud.json')
     .then(response => response.json())
     .then(data => {
+        let b = 0;
         for(let j = 0; j < data.length; j++){
             if(data[j].Status == 'Paid'){
             }
             else{
+                b++;
                 make('div').from('studrs_' + j).to('#stud_NP_list').content('').build()
                 id('studrs_' + j).addClass('stud_box')
                 
-                make('div').from('stud_Name_' + j).to('#studrs_' + j).content(j + 1 + ": " + data[j].Student_Name).build()
+                make('div').from('stud_Name_' + j).to('#studrs_' + j).content(b + ": " + data[j].Student_Name).build()
                 id('stud_Name_' + j).addClass('SName')
     
                 make('div').from('containerss' + j).to('#studrs_' + j).content('').build()
@@ -150,6 +156,11 @@ function head_function(){
             document.getElementById('stud_all_list').style.display = "block"
             document.getElementById('stud_paid_list').style.display = "none"
             document.getElementById('stud_NP_list').style.display = "none"
+
+            document.getElementById('All').classList.add('active')
+            document.getElementById('Paid').classList.remove('active')
+            document.getElementById('NP').classList.remove('active')
+
         })
     }
     if(Paid){
@@ -157,6 +168,10 @@ function head_function(){
             document.getElementById('stud_all_list').style.display = "none"
             document.getElementById('stud_paid_list').style.display = "block"
             document.getElementById('stud_NP_list').style.display = "none"
+
+            document.getElementById('All').classList.remove('active')
+            document.getElementById('Paid').classList.add('active')
+            document.getElementById('NP').classList.remove('active')
         })
     }
     if(NP){
@@ -164,6 +179,10 @@ function head_function(){
             document.getElementById('stud_all_list').style.display = "none"
             document.getElementById('stud_paid_list').style.display = "none"
             document.getElementById('stud_NP_list').style.display = "block"
+
+            document.getElementById('All').classList.remove('active')
+            document.getElementById('Paid').classList.remove('active')
+            document.getElementById('NP').classList.add('active')
         })
     }
 }
