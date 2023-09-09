@@ -32,7 +32,7 @@ function Student_List(){
     make('section').from('stud_list').to('body').content('').build()
 
     /**
-    * All
+    * Allasdfdsf
     * Fully Paid
     * Not Fully Paid
     */
