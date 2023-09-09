@@ -29,7 +29,7 @@ function header(){
     id('NP').addClass('head')
     id('Status').addClass('head')
     
-    make('section').from('SecondYear').to('body').content('BSIT 2B').build()
+    make('section').from('SecondYear').to('body').content('BSIT 2').build()
 
     head_function()
 }
