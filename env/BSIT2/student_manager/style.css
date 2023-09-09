@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#SecondYear{
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#header{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(229, 255, 0);
+    padding: 10px;
+    font-size: 24px;
+}
+
+.head{
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: red;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.stud_box{
+    display: flex;
+    background-color: rgb(64, 112, 168);
+    color: white;
+    margin: 3px;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+#stud_list{
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.container{
+    display: flex;
+}
+
+.SName{
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.SPending{
+    padding: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.SPayed{
+    background-color: green;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+.SNot{
+    background-color: rgb(128, 41, 0);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+.SHalf{
+    background-color: rgb(179, 97, 60);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (max-width:1100px){
+    #stud_list{
+        width: 80%;
+    }
+}
+
+@media (max-width:1100px){
+    #stud_list{
+        width: 95%;
+    }
+}

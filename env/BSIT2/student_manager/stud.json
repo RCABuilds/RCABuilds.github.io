@@ -1,0 +1,317 @@
+[
+  {
+    "Student_Name": "Acangan, Albert",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Anquiliano, Gian Carlo B",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Apaga, Eddie Jhune T",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Aspiras, Renz C",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Balunsat, Cristeta M",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Balut, John Anthony V",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Bartolome, Erwin D",
+    "Status": "Half Paid",
+    "Pending": 10
+  },
+  {
+    "Student_Name": "Bassi, Gil Goden Keiffer G",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Bolusan, Josh Lou Philip B",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Buado, Edwin, Jr. O",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Bueno, Ronnie H",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Bulogan, Lilian P",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Cabarles, Randelle Jay S",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Daulayan, Joe Wilson D",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "De Ramos, Jan Terence P",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Delfin, Christian Ace C",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Doctor, Lou Aviane G",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Fabian, Feliz John B",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Feliciano, Kathlene Claire H",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Fernandez, Brix Aila G",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Francisco, Kurt A",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Galera, Luke Andrei L",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Garcia, Mark Edrian D",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Garcia, Roan",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Grospe, Oliver L",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Imbat, Dimple Jenine S",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Landagura, Ian Tristan",
+    "Status": "Half Paid",
+    "Pending": 10
+  },
+  {
+    "Student_Name": "Llacer, Elmer Jr. C",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Lucas, Bernie Joseph H",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Lucero, Jimbert M",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Manuel, Jan Mark H",
+    "Status": "Half Paid",
+    "Pending": 10
+  },
+  {
+    "Student_Name": "Marquez, Lanie Mae",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Mindaros, Xyrine",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Molina, Angelica Joyce N",
+    "Status": "Half Paid",
+    "Pending": 10
+  },
+  {
+    "Student_Name": "Molina, Kenji",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Nicol, Levi D",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Norberte, Polen Claire A",
+    "Status": "Half Paid",
+    "Pending": 10
+  },
+  {
+    "Student_Name": "Omanito, Chin May D",
+    "Status": "Half Paid",
+    "Pending": 10
+  },
+  {
+    "Student_Name": "Omanito, Nhimfa M",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Opeña, Harvie Kier",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Orbigo, Fred Rick F",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Pagtulingan, Renjiebieh V",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Paladin, Emil C",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Palawe, Zyrene P",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Pangangaan, Jhon Llander A",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Pascua, Gary Noel B",
+    "Status": "Half Paid",
+    "Pending": 10
+  },
+  {
+    "Student_Name": "Pelerio, Nathaniel",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Ragasa, Gregorio C",
+    "Status": "Half Paid",
+    "Pending": 10
+  },
+  {
+    "Student_Name": "Ramos, Angiela Mae P",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Ramos, Charles T",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Reasonda, Augie Justine B",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Reyes, Irish Vanessa L",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Rodriguez, Imee G",
+    "Status": "Half Paid",
+    "Pending": 10
+  },
+  {
+    "Student_Name": "Sabico, Joy A",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Soriano, Jaevy Kiss Xenia G",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Soriano, Mark Dave A",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Sunga, Gerald R",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Valdez, Linuel Jake G",
+    "Status": "Paid",
+    "Pending": 0
+  },
+  {
+    "Student_Name": "Ventura, Edmarie Chinelle C",
+    "Status": "Half Paid",
+    "Pending": 10
+  },
+  {
+    "Student_Name": "Villa, Roi Jetzter C",
+    "Status": "Half Paid",
+    "Pending": 10
+  },
+  {
+    "Student_Name": "Villamor, Jomar A",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Villar, Jasmin B",
+    "Status": "Not Yet",
+    "Pending": 20
+  },
+  {
+    "Student_Name": "Vanilyn, Galamay",
+    "Status": "Not Yet",
+    "Pending": 20
+  }
+]
