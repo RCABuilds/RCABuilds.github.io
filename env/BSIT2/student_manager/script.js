@@ -20,9 +20,9 @@ function Student_List(){
       
       make('section').from('header').to('body').content('').build()
       
-      make('div').from('NP').to('#header').content('Not Paid').build()
+      /*make('div').from('NP').to('#header').content('Not Paid').build()
       make('div').from('Paid').to('#header').content('Paid').build()
-      make('div').from('All').to('#header').content('All').build()
+      make('div').from('All').to('#header').content('All').build()*/
 
       id('All').addClass('head')
       id('Paid').addClass('head')
