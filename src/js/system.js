@@ -96,7 +96,7 @@ function content(){
                 if(value_title){
                     value_title.addEventListener('dblclick', () => {
                         //print(value_title)    
-                        openLink(jsonData[i].path)                    
+                               
                     })
                 }
             }

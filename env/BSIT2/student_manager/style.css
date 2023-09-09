@@ -25,6 +25,8 @@
     background-color: red;
     padding: 5px;
     border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
 }
 
 .stud_box{
@@ -37,7 +39,22 @@
     justify-content: space-between;
     border-radius: 10px;
 }
-#stud_list{
+#stud_all_list{
+    display: block;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#stud_paid_list{
+    display: none;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#stud_NP_list{
+    display: none;
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
