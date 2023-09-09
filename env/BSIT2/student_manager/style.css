@@ -33,7 +33,7 @@
     text-align: center;
 }
 .head:hover{
-    background-color: white;
+    background-color: rgb(197, 197, 197);
     color: black;
 }
 
