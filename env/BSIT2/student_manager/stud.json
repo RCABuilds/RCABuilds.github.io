@@ -31,8 +31,8 @@
   },
   {
     "Student_Name": "Bartolome, Erwin D",
-    "Status": "Half Paid",
-    "Pending": 10
+    "Status": "Paid",
+    "Pending": 0
   },
   {
     "Student_Name": "Bassi, Gil Goden Keiffer G",
@@ -291,8 +291,8 @@
   },
   {
     "Student_Name": "Ventura, Edmarie Chinelle C",
-    "Status": "Half Paid",
-    "Pending": 10
+    "Status": "Paid",
+    "Pending": 0
   },
   {
     "Student_Name": "Villa, Roi Jetzter C",
