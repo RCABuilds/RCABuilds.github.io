@@ -13,6 +13,12 @@ if(no){
 }
 if (yes) {
     yes.addEventListener('click', () => {
-        window.open("yey.htm", "_self")
+        yes.style.transition = "0.3s ease"
+        let x = Math.random() * 80;
+        let y = Math.random() * 80;
+        yes.style.top = y + "%"
+        yes.style.left = x + "%"
     })
 }
+
+//window.open("yey.htm", "_self")
