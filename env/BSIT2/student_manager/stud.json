@@ -131,8 +131,8 @@
   },
   {
     "Student_Name": "Landagura, Ian Tristan",
-    "Status": "Half Paid",
-    "Pending": 10
+    "Status": "Paid",
+    "Pending": 0
   },
   {
     "Student_Name": "Llacer, Elmer Jr. C",
@@ -196,8 +196,8 @@
   },
   {
     "Student_Name": "Opeña, Harvie Kier",
-    "Status": "Not Yet",
-    "Pending": 20
+    "Status": "Paid",
+    "Pending": 0
   },
   {
     "Student_Name": "Orbigo, Fred Rick F",
