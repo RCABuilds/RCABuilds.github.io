@@ -96,8 +96,8 @@
   },
   {
     "Student_Name": "Fernandez, Brix Aila G",
-    "Status": "Not Yet",
-    "Pending": 20
+    "Status": "Paid",
+    "Pending": 0
   },
   {
     "Student_Name": "Francisco, Kurt A",
@@ -306,8 +306,8 @@
   },
   {
     "Student_Name": "Villar, Jasmin B",
-    "Status": "Not Yet",
-    "Pending": 20
+    "Status": "Paid",
+    "Pending": 0
   },
   {
     "Student_Name": "Vanilyn, Galamay",
