@@ -56,8 +56,8 @@
   },
   {
     "Student_Name": "Bulogan, Lilian P",
-    "Status": "Not Yet",
-    "Pending": 20
+    "Status": "Paid",
+    "Pending": 0
   },
   {
     "Student_Name": "Cabarles, Randelle Jay S",
@@ -181,8 +181,8 @@
   },
   {
     "Student_Name": "Norberte, Polen Claire A",
-    "Status": "Half Paid",
-    "Pending": 10
+    "Status": "Paid",
+    "Pending": 0
   },
   {
     "Student_Name": "Omanito, Chin May D",
