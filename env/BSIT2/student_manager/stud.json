@@ -296,8 +296,8 @@
   },
   {
     "Student_Name": "Villa, Roi Jetzter C",
-    "Status": "Half Paid",
-    "Pending": 10
+    "Status": "Paid",
+    "Pending": 0
   },
   {
     "Student_Name": "Villamor, Jomar A",
