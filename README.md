@@ -1,4 +1,3 @@
 # RCABuilds.github.io
 
-Collection of my builds:
-idk
+This is my website, a collection of my builds 
